@@ -1,25 +1,32 @@
-Hi, I’m Ekin.
+# Hi, I'm Ekin 👋
 
-I’m an undergraduate Molecular Biology & Genetics student working at the
-interface of transcriptomics and computational genomics.
+Molecular Biology & Genetics undergraduate | Transcriptomics | Computational Genomics
 
-I work primarily with bulk RNA-seq data and focus on:
+## Current Focus
 
-- RNA-seq quality control and normalization  
-- Differential expression analysis  
-- Exploratory data analysis (PCA, clustering)  
-- Functional enrichment (GO / KEGG)  
+Building reproducible bioinformatics workflows for RNA-seq analysis — from raw data to biological insight.
 
-### Projects
+## Skills
 
-- **Transcriptional profiling of SARS-CoV-2 infection using bulk RNA-seq**  
-  (QC → normalization → PCA → differential expression → pathway analysis)
+**Analysis**: Differential expression (DESeq2), pathway enrichment (GO/KEGG), dimensionality reduction (PCA, UMAP)
 
-Currently building deeper skills in statistical genomics and reproducible
-bioinformatics workflows.
+**Languages**: R, Python
 
-Tools: Python, pandas, numpy, matplotlib, seaborn, Jupyter Lab
+**Tools**: Bioconductor, tidyverse, ggplot2, pandas, Jupyter
 
+## Featured Project
+
+🧬 **[SARS-CoV-2 Host Response Analysis](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression)**  
+Bulk RNA-seq pipeline identifying 1,902 DE genes and ISG pathway enrichment in COVID-19 infection
+
+## Learning Next
+
+Single-cell RNA-seq (Seurat/Scanpy) • Workflow automation (Nextflow)
+
+## Connect
+
+📍 United Kingdom  
+📧 Open to research collaborations and bioinformatics opportunities
 
 
 
