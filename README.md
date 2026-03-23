@@ -4,7 +4,7 @@ Second-year Molecular Biology & Genetics at UEA (Norwich Research Park). I build
 
 - Working on covariate-aware differential expression and automated immune cell profiling from single-cell data
 - Comfortable with DESeq2, scanpy, Bioconductor, and building CI-tested pipelines from scratch
-- Looking for a summer 2026 computational biology or bioinformatics placement
+- Open to contributing to computational biology and bioinformatics research projects
 
 ### Projects
 
@@ -15,7 +15,5 @@ Second-year Molecular Biology & Genetics at UEA (Norwich Research Park). I build
 ### Tools
 
 R · Python · Bash · DESeq2 · scanpy · AnnData · Bioconductor · clusterProfiler · GEOquery · Git · GitHub Actions · renv · pytest
-
-### Contact
 
 evk23umu@uea.ac.uk · Norwich, UK
