@@ -2,12 +2,6 @@
 
 Molecular Biology & Genetics undergraduate at UEA. I build reproducible analysis pipelines for genomics data — bulk and single-cell RNA-seq — focused on proper statistics and biologically meaningful questions.
 
-<p align="center">
-  <a href="https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling">
-    <img src="https://raw.githubusercontent.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling/main/docs/profile_banner.gif" alt="PBMC immune cell atlas — automated cell type profiling from single-cell RNA-seq" width="700">
-  </a>
-</p>
-
 ## Projects
 
 **[Single-Cell Immune Profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling)** — Python/scanpy pipeline for PBMC cell type profiling. Automated annotation via marker gene scoring, multi-resolution Leiden clustering with silhouette evaluation, publication-quality figures. CI on Python 3.10–3.12, pytest.
