@@ -6,11 +6,13 @@ Molecular Biology & Genetics undergraduate at UEA building at the intersection o
 
 I build reproducible analysis pipelines for genomics data, focused on asking original biological questions rather than just running standard tools.
 
-**Current work:** Extending bulk RNA-seq differential expression analysis with covariate-aware models — viral load stratification and sex-interaction effects to move beyond simple case-control designs.
+**Current work:** Building reproducible pipelines for both bulk and single-cell RNA-seq — from covariate-aware differential expression to automated cell type profiling.
 
 ## Projects
 
-**[SARS-CoV-2 Host Response Analysis](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression)** — Reproducible DESeq2 pipeline on GSE152075 (n=484). 1,902 DE genes, ISG pathway enrichment, full-cohort sensitivity analysis. Extended with novel viral load stratification and sex-stratified interaction models. CI/CD, renv, Zenodo DOI.
+**[Single-Cell Immune Profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling)** — Python/scanpy pipeline for PBMC cell type profiling. Automated annotation via marker gene scoring, multi-resolution Leiden clustering with silhouette evaluation, publication-quality figures. CI/CD, pytest.
+
+**[SARS-CoV-2 Host Response Analysis](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression)** — R/DESeq2 pipeline on GSE152075 (n=484). 1,902 DE genes, ISG pathway enrichment, viral load stratification, sex-stratified interaction models. CI/CD, renv, Zenodo DOI.
 
 **[SARS-CoV-2 3D Visualization](https://github.com/Ekin-Kahraman/gse152075-3d-visualization)** — Interactive 3D animation of host transcriptional response data.
 
@@ -20,7 +22,8 @@ I build reproducible analysis pipelines for genomics data, focused on asking ori
 
 | Domain | Tools |
 |--------|-------|
-| Transcriptomics | DESeq2, edgeR, clusterProfiler, GO/KEGG |
+| Bulk RNA-seq | DESeq2, edgeR, clusterProfiler, GO/KEGG |
+| Single-cell | scanpy, AnnData, Leiden, UMAP |
 | Languages | R, Python, Bash |
 | Bioinformatics | Bioconductor, GEOquery, PCA/UMAP |
 | Engineering | Git, GitHub Actions, renv, testthat |
