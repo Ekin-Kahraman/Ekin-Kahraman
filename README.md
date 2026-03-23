@@ -1,6 +1,6 @@
 ### Hi, I'm Ekin
 
-Second-year Molecular Biology & Genetics at UEA (Norwich Research Park). I build reproducible analysis pipelines for bulk and single-cell RNA-seq data in R and Python.
+Second-year Molecular Biology & Genetics at UEA. I build reproducible analysis pipelines for bulk and single-cell RNA-seq data in R and Python.
 
 - Working on covariate-aware differential expression and automated immune cell profiling from single-cell data
 - Comfortable with DESeq2, scanpy, Bioconductor, and building CI-tested pipelines from scratch
