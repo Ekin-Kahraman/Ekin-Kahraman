@@ -1,25 +1,21 @@
-# Ekin Kahraman
+### Hi, I'm Ekin
 
-Molecular Biology & Genetics undergraduate at UEA. I build reproducible analysis pipelines for genomics data — bulk and single-cell RNA-seq — focused on proper statistics and biologically meaningful questions.
+Second-year Molecular Biology & Genetics at UEA (Norwich Research Park). I build reproducible analysis pipelines for bulk and single-cell RNA-seq data in R and Python.
 
-## Projects
+- Working on covariate-aware differential expression and automated immune cell profiling from single-cell data
+- Comfortable with DESeq2, scanpy, Bioconductor, and building CI-tested pipelines from scratch
+- Looking for a summer 2026 computational biology or bioinformatics placement
 
-**[Single-Cell Immune Profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling)** — Python/scanpy pipeline for PBMC cell type profiling. Automated annotation via marker gene scoring, multi-resolution Leiden clustering with silhouette evaluation, publication-quality figures. CI on Python 3.10–3.12, pytest.
+### Projects
 
-**[SARS-CoV-2 Host Response Analysis](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression)** — R/DESeq2 pipeline on GSE152075 (n=484). 1,902 DE genes, ISG pathway enrichment, viral load stratification, sex-stratified interaction models. CI/CD, renv, Zenodo DOI.
+**[single-cell-rnaseq-immune-profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling)** — Python/scanpy pipeline for PBMC cell type profiling (2,638 cells, 6 immune cell types). Automated marker-based annotation, multi-resolution Leiden clustering, publication figures. CI on Python 3.10–3.12, pytest.
 
-## Skills
+**[bulk-rnaseq-differential-expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression)** — R/DESeq2 pipeline on GSE152075 (n=484 nasopharyngeal swabs, SARS-CoV-2). 1,902 DE genes, ISG pathway enrichment, viral load stratification, sex-interaction models. CI/CD, renv, Zenodo DOI.
 
-| Domain | Tools |
-|--------|-------|
-| Bulk RNA-seq | DESeq2, edgeR, clusterProfiler, GO/KEGG |
-| Single-cell | scanpy, AnnData, Leiden, UMAP |
-| Languages | R, Python, Bash |
-| Bioinformatics | Bioconductor, GEOquery, PCA/UMAP |
-| Engineering | Git, GitHub Actions, CI/CD, renv, pytest, testthat |
+### Tools
 
-## Contact
+R · Python · Bash · DESeq2 · scanpy · AnnData · Bioconductor · clusterProfiler · GEOquery · Git · GitHub Actions · renv · pytest
 
-Summer 2026 computational biology or bioinformatics internship. Wet-lab understanding (molecular biology, genetics, immunology) combined with pipeline development and reproducible research practices.
+### Contact
 
-evk23umu@uea.ac.uk · UK-based
+evk23umu@uea.ac.uk · Norwich, UK
