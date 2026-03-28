@@ -16,4 +16,4 @@ Second-year Molecular Biology & Genetics at UEA. I build reproducible analysis p
 
 R · Python · Bash · DESeq2 · scanpy · AnnData · Bioconductor · clusterProfiler · GEOquery · Git · GitHub Actions · renv · pytest
 
-evk23umu@uea.ac.uk · Norwich, UK
+evk23umu@uea.ac.uk · London, UK
