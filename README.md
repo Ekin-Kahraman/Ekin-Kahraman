@@ -12,7 +12,7 @@ Second author on an ophthalmology research paper (in preparation).
 
 #### Highlights
 
-🧬 **1,902 DE genes** identified in SARS-CoV-2 host response — including 12 with sex-biased expression ([bulk-rnaseq-differential-expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression))
+🧬 **1,773 DE genes** identified in SARS-CoV-2 host response — including 12 with sex-biased expression ([bulk-rnaseq-differential-expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression))
 
 🔬 **6 immune cell types** profiled across 2,638 PBMCs with automated annotation ([single-cell-rnaseq-immune-profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling))
 
