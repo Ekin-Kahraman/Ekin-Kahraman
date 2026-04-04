@@ -4,6 +4,8 @@
 
 ---
 
+How do host transcriptional programmes diverge during viral infection — and can AI make clinical safety nets reliable enough for primary care?
+
 I build reproducible analysis pipelines for genomics data and AI systems for healthcare. Molecular biology background — I understand what the data means, not just how to process it.
 
 Second author on an ophthalmology research paper (in preparation).
