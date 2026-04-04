@@ -1,12 +1,12 @@
 ## Ekin Kahraman
 
-**Molecular Biology & Genetics** at UEA · Bridging wet-lab biology and computation
+**Molecular Biology & Genetics** at UEA · Computational biology and clinical AI
 
 ---
 
-Building reproducible pipelines for genomics and clinical AI. Currently focused on RNA-seq differential expression, single-cell immune profiling, and AI-driven patient safety systems for NHS primary care.
+I build reproducible analysis pipelines for genomics data and AI systems for healthcare. Molecular biology background — I understand what the data means, not just how to process it.
 
-Second author on an ophthalmology paper in preparation for Nature.
+Second author on an ophthalmology research paper (in preparation).
 
 #### Highlights
 
