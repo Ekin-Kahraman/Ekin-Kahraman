@@ -14,7 +14,7 @@ Second author on an ophthalmology research paper (in preparation).
 
 🧬 **1,773 DE genes** identified in SARS-CoV-2 host response — including 12 with sex-biased expression ([bulk-rnaseq-differential-expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression))
 
-🔬 **6 immune cell types** profiled across 2,638 PBMCs with automated annotation ([single-cell-rnaseq-immune-profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling))
+🔬 **5 immune cell types + CD4/CD8 T cell resolution** across 2,604 PBMCs with trajectory inference ([single-cell-rnaseq-immune-profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling))
 
 🏥 **39 conditions** covered in an AI clinical safety netting system for NHS GPs — [live demo](https://safetynett.lovable.app) ([safetynett](https://github.com/Ekin-Kahraman/safetynett))
 
