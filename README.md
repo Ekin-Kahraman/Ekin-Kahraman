@@ -10,6 +10,8 @@ I build pipelines that find things in genomics data — then build systems that 
 
 [5 immune cell types](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling) in 2,604 PBMCs — then subclustered T cells to split CD4⁺/CD8⁺ that standard resolution misses.
 
+[AUC 0.984](https://github.com/Ekin-Kahraman/gene-expression-classifier) predicting COVID status from gene expression. The top ML features are the same interferon-stimulated genes found by differential expression — independent confirmation.
+
 **What I've built**
 
 [Nextflow RNA-seq pipeline](https://github.com/Ekin-Kahraman/rnaseq-nextflow-pipeline) — FASTQ to DE results in 7 containerised steps. Docker, Singularity, CI.
