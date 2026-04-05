@@ -9,7 +9,7 @@ Molecular Biology & Genetics · UEA · Computational biology and clinical AI
 #### What I've found
 
 🧬 **1,773 genes** change expression during SARS-CoV-2 infection — 12 do so differently in men vs women
-[bulk-rnaseq-differential-expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression) · R · DESeq2 · Zenodo DOI
+[bulk-rnaseq-differential-expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression) · R · DESeq2 · [Zenodo](https://doi.org/10.5281/zenodo.19429954)
 
 🔬 **5 immune cell types** in 2,604 PBMCs — subclustered T cells to resolve CD4+/CD8+ that standard clustering misses
 [single-cell-rnaseq-immune-profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling) · Python · scanpy · PAGA trajectory
