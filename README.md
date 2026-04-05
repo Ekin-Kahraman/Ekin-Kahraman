@@ -8,7 +8,7 @@ I build pipelines that find things in genomics data — then build systems that 
 
 [1,773 genes](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression) change expression during SARS-CoV-2 infection. 12 do so differently in men vs women. Nobody had tested for that interaction in the original study.
 
-[Which cells are responsible?](https://github.com/Ekin-Kahraman/covid-airway-deconvolution) A PyTorch neural network trained on tissue-matched single-cell data decomposes 484 bulk samples into 14 airway cell types. Ciliated epithelium is depleted. Immune cells infiltrate. Validation r = 0.973.
+[Which cells are responsible?](https://github.com/Ekin-Kahraman/covid-airway-deconvolution) A PyTorch neural network trained on tissue-matched single-cell data decomposes 484 bulk samples into 14 airway cell types. Basal stem cells are depleted. Goblet cells expand. Immune cells infiltrate. 10 cell types significantly changed (r = 0.950). First tissue-matched deconvolution of this dataset.
 
 [5 immune cell types](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling) in 2,604 PBMCs — subclustered T cells to split CD4⁺/CD8⁺ that standard resolution misses.
 
