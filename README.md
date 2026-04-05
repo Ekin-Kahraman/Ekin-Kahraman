@@ -16,11 +16,13 @@ Second author on an ophthalmology research paper (in preparation).
 
 🔬 **5 immune cell types + CD4/CD8 T cell resolution** across 2,604 PBMCs with trajectory inference ([single-cell-rnaseq-immune-profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling))
 
+🔧 **End-to-end RNA-seq Nextflow pipeline** — FastQC, fastp, HISAT2, featureCounts, DESeq2, MultiQC. Dockerised. ([rnaseq-nextflow-pipeline](https://github.com/Ekin-Kahraman/rnaseq-nextflow-pipeline))
+
 🏥 **39 conditions** covered in an AI clinical safety netting system for NHS GPs — [live demo](https://safetynett.lovable.app) ([safetynett](https://github.com/Ekin-Kahraman/safetynett))
 
 #### Tools
 
-`Python` `R` `TypeScript` `Bash` `DESeq2` `scanpy` `AnnData` `Bioconductor` `Supabase` `GitHub Actions`
+`Python` `R` `TypeScript` `Nextflow` `Bash` `Docker` `DESeq2` `scanpy` `HISAT2` `Bioconductor` `GitHub Actions`
 
 ---
 
