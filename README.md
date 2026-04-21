@@ -22,7 +22,7 @@ I build pipelines that find things in genomics data — then build systems that 
 
 ---
 
-6 merged pull requests to the [scverse](https://scverse.org) ecosystem ([scanpy](https://github.com/scverse/scanpy), [PyDESeq2](https://github.com/scverse/PyDESeq2)); [muon](https://github.com/scverse/muon) PR open.
+7 merged pull requests to the [scverse](https://scverse.org) ecosystem ([scanpy](https://github.com/scverse/scanpy), [PyDESeq2](https://github.com/scverse/PyDESeq2)); [muon](https://github.com/scverse/muon) PR open.
 
 Molecular Biology & Genetics, UEA. Volunteer in the [Grieshop Lab](https://github.com/karlgrieshop) (evolutionary genetics).
 
