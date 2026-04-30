@@ -14,7 +14,7 @@ I build pipelines that find things in genomics data — then build systems that 
 
 **What I've built**
 
-[rustscenic](https://github.com/Ekin-Kahraman/rustscenic) — Rust + PyO3 rewrite of the four slow SCENIC+ single-cell regulatory-network stages. Installs where arboreto + pyscenic no longer do. 27–90× faster per-cell scoring, 6 GB vs 40+ GB memory at 100k cells, 0.98 per-cell correlation with pyscenic on the Ziegler 31k airway atlas. Active remote collaboration with the Huang Lab (Mount Sinai).
+[rustscenic](https://github.com/Ekin-Kahraman/rustscenic) — Rust + PyO3 rewrite of SCENIC+. 200k cells in 17 min at 7.4 GB (~5.4× less memory than scenicplus); pip install with no Java/dask/CUDA. Active collaboration with the Huang Lab (Mount Sinai).
 
 [Nextflow RNA-seq pipeline](https://github.com/Ekin-Kahraman/rnaseq-nextflow-pipeline) — FASTQ to DE results in 7 containerised steps. Docker, Singularity, CI.
 
@@ -22,7 +22,7 @@ I build pipelines that find things in genomics data — then build systems that 
 
 ---
 
-7 merged pull requests to the [scverse](https://scverse.org) ecosystem ([scanpy](https://github.com/scverse/scanpy), [PyDESeq2](https://github.com/scverse/PyDESeq2)); [muon](https://github.com/scverse/muon) PR open.
+7 merged pull requests to the [scverse](https://scverse.org) ecosystem ([scanpy](https://github.com/scverse/scanpy), [PyDESeq2](https://github.com/scverse/PyDESeq2)).
 
 Molecular Biology & Genetics, UEA. Volunteer in the [Grieshop Lab](https://github.com/karlgrieshop) (evolutionary genetics).
 
