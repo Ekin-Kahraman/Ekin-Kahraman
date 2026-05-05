@@ -8,10 +8,8 @@ I build computational biology software for single-cell genomics and gene regulat
 
 Head-to-head vs reference implementations on identical input, same hardware:
 
-- **AUCell 88× faster** than pyscenic (0.21 s vs 18.6 s on 10x Multiome, 10k cells × 1,457 regulons)
-- **ATAC peak calling 9.9× faster than MACS2** (8.4 s vs 83.3 s, F1 = 0.825)
+- **AUCell 88× faster** than pyscenic at per-cell Pearson 0.99 (0.21 s vs 18.6 s on 10x Multiome, 10k cells × 1,457 regulons)
 - **GRN 1.78× faster** than pinned arboreto 0.1.6 on PBMC (per-TF Spearman 0.63)
-- **cisTarget kernel bit-identical** to ctxcore reference (Pearson 1.0000)
 - **~6.3× less memory** at 100k cells × 20k genes × 4 stages (6.3 GB vs >40 GB reported for scenicplus)
 - **5 runtime dependencies** (numpy, pandas, pyarrow, scipy, anndata) vs 40+ for the reference stack
 - Biological validation: 9/9 expected cortex TFs recovered on mouse brain E18 multiome; collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) (Precision Omics, Icahn Mount Sinai)
