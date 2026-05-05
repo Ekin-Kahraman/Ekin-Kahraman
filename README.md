@@ -16,9 +16,9 @@ Benchmarks vs the reference Python stack on identical input (v0.3.x measurements
 
 ## Selected work
 
-- **7 merged [scverse](https://scverse.org) PRs** across [scanpy](https://github.com/scverse/scanpy) and [PyDESeq2](https://github.com/scverse/PyDESeq2); open [AnnData concat API PR](https://github.com/scverse/anndata/pull/2416)
+- **7 merged scverse PRs** across [scanpy](https://github.com/scverse/scanpy) and [PyDESeq2](https://github.com/scverse/PyDESeq2); open [AnnData concat API PR](https://github.com/scverse/anndata/pull/2416)
 - **1,773 DE genes** ([Zenodo DOI](https://doi.org/10.5281/zenodo.19429954)): DESeq2 on SARS-CoV-2 nasopharyngeal RNA-seq, n = 60 primary, 99.8% concordant with n = 484 sensitivity ([repo](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression))
 - **r = 0.954 on 5-fold CV**: PyTorch deconvolution of 484 bulk RNA-seq samples into 14 airway cell types, upper bound with no batch effects ([repo](https://github.com/Ekin-Kahraman/covid-airway-deconvolution))
-- **[Live deploy](https://safetynett.lovable.app)**: SafetyNett, AI safety-netting prototype for NHS GP workflows, OpenClaw Clinical Hackathon ([repo](https://github.com/Ekin-Kahraman/safetynett))
+- **Live deploy**: [SafetyNett](https://safetynett.lovable.app), AI safety-netting prototype for NHS GP workflows, OpenClaw Clinical Hackathon ([repo](https://github.com/Ekin-Kahraman/safetynett))
 
 evk23umu@uea.ac.uk
