@@ -1,6 +1,6 @@
 # Ekin Kahraman
 
-Building [rustscenic](https://github.com/Ekin-Kahraman/rustscenic), a Rust + PyO3 rewrite of SCENIC+, with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai.
+Building [rustscenic](https://github.com/Ekin-Kahraman/rustscenic), a Rust + PyO3 rewrite of SCENIC+, in collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai.
 
 [v0.4.0](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.0) covers the full SCENIC+ pipeline: GRN, AUCell, topics, cisTarget, enhancer links, eRegulons.
 
