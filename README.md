@@ -2,9 +2,7 @@
 
 Building [rustscenic](https://github.com/Ekin-Kahraman/rustscenic), a Rust + PyO3 rewrite of SCENIC+, with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai.
 
-## Current focus
-
-[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.0 release](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.0)): full SCENIC+ pipeline for single-cell regulatory network analysis. GRN, AUCell, topics, cisTarget, enhancer links, eRegulons.
+[v0.4.0](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.0) covers the full SCENIC+ pipeline: GRN, AUCell, topics, cisTarget, enhancer links, eRegulons.
 
 Benchmarks vs the reference Python stack on identical input (v0.3.x measurements; [v0.4.x cross-dataset sweep underway](https://github.com/Ekin-Kahraman/rustscenic/blob/main/docs/v0.4.x-benchmark-plan.md)):
 
