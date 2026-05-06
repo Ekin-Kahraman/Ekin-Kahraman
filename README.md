@@ -10,13 +10,12 @@ Benchmarks vs the reference Python stack on identical input (v0.3.x measurements
 - **GRN 1.78× faster** than pinned arboreto 0.1.6 on PBMC (per-TF Spearman 0.63)
 - **~6.3× less memory** at 100k cells × 20k genes × 4 stages (6.3 GB vs >40 GB reported for scenicplus)
 - **5 runtime dependencies** (numpy, pandas, pyarrow, scipy, anndata) vs 40+ for the reference stack
-- **9/9 cortex TFs recovered** on mouse brain E18 multiome (biological validation)
+- **9/9 canonical cortex TFs recovered** on mouse brain E18 multiome (biological validation)
 
 ## Selected work
 
 - **7 merged scverse PRs** across [scanpy](https://github.com/scverse/scanpy) and [PyDESeq2](https://github.com/scverse/PyDESeq2); open [AnnData concat API PR](https://github.com/scverse/anndata/pull/2416)
 - **1,773 DE genes** ([Zenodo DOI](https://doi.org/10.5281/zenodo.19429954)): DESeq2 on SARS-CoV-2 nasopharyngeal RNA-seq, n = 60 primary, 99.8% concordant with n = 484 sensitivity ([repo](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression))
-- **r = 0.954 on 5-fold CV**: PyTorch deconvolution of 484 bulk RNA-seq samples into 14 airway cell types, upper bound with no batch effects ([repo](https://github.com/Ekin-Kahraman/covid-airway-deconvolution))
-- **Live deploy**: [SafetyNett](https://safetynett.lovable.app), AI safety-netting prototype for NHS GP workflows, OpenClaw Clinical Hackathon ([repo](https://github.com/Ekin-Kahraman/safetynett))
+- **r = 0.954 on pseudo-bulk 5-fold CV**: PyTorch deconvolution of 484 bulk RNA-seq samples into 14 airway cell types, upper bound with no batch effects ([repo](https://github.com/Ekin-Kahraman/covid-airway-deconvolution))
 
 evk23umu@uea.ac.uk
