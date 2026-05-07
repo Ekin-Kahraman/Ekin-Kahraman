@@ -6,6 +6,8 @@ Computational biology + scientific software: RNA-seq, single-cell analysis, and 
 
 [**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.1](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.1), [PyPI](https://pypi.org/project/rustscenic/)): rewriting fragile SCENIC/SCENIC+ regulatory-network workflows as installable, CPU-efficient Rust + PyO3 software, built in collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai.
 
+Legacy SCENIC stacks need Java, dask, and a long chain of transitive packages that frequently break on current Python; rustscenic ships the practical compute path without them.
+
 - One install: `pip install rustscenic`
 - Python 3.10–3.13; Linux/macOS wheels for x86_64 and aarch64
 - Five runtime dependencies: numpy, pandas, pyarrow, scipy, anndata
