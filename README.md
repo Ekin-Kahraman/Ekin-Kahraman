@@ -1,14 +1,10 @@
 # Ekin Kahraman
 
-Rebuilding fragile single-cell regulatory-network pipelines as installable, CPU-efficient Rust + PyO3 software.
+Computational biology + scientific software: RNA-seq, single-cell analysis, and Rust/Python tooling.
 
 ## Currently building
 
-[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.1](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.1), [PyPI](https://pypi.org/project/rustscenic/)): a Rust + PyO3 rewrite of the practical SCENIC/SCENIC+ compute stack, built in collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai.
-
-The problem: legacy SCENIC workflows are difficult to install on current Python stacks and often depend on a large mix of Java, dask, and fragile transitive packages.
-
-What rustscenic changes:
+[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.1](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.1), [PyPI](https://pypi.org/project/rustscenic/)): rewriting fragile SCENIC/SCENIC+ regulatory-network workflows as installable, CPU-efficient Rust + PyO3 software, built in collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai.
 
 - One install: `pip install rustscenic`
 - Python 3.10–3.13; Linux/macOS wheels for x86_64 and aarch64
