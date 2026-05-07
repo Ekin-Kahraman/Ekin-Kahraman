@@ -6,6 +6,10 @@ Rebuilding the slow stages of single-cell pipelines in Rust + PyO3.
 
 [**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.1](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.1), on PyPI): Rust + PyO3 rewrite of SCENIC/SCENIC+ for single-cell regulatory network analysis, in collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai. End-to-end multiome pipeline: GRN, AUCell, topics, cisTarget, enhancer links, eRegulons.
 
+- End-to-end pipeline validated on real 10x multiome datasets: human PBMC and mouse brain E18
+- `pip install rustscenic` on Python 3.10–3.13; wheels for Linux/macOS on x86_64/aarch64
+- Five runtime dependencies: numpy, pandas, pyarrow, scipy, anndata
+
 ## Selected work
 
 - scverse: 4 doc improvements to [scanpy](https://github.com/scverse/scanpy) plotting, fix to [PyDESeq2](https://github.com/scverse/PyDESeq2) dataframe handling, open algorithmic PR on [AnnData `concat` API](https://github.com/scverse/anndata/pull/2416)
