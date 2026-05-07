@@ -8,8 +8,7 @@ Computational biology + scientific software: RNA-seq, single-cell analysis, and 
 
 Legacy SCENIC stacks need Java, dask, and a long chain of transitive packages that frequently break on current Python; rustscenic ships the practical compute path without them.
 
-- One install: `pip install rustscenic`
-- Python 3.10–3.13; Linux/macOS wheels for x86_64 and aarch64
+- `pip install rustscenic`; Python 3.10–3.13; Linux/macOS wheels for x86_64 and aarch64
 - Five runtime dependencies: numpy, pandas, pyarrow, scipy, anndata
 - Core stages in one package: GRN, AUCell, topics, cisTarget, enhancer links, eRegulons
 - End-to-end multiome validated on human PBMC and mouse brain E18; stage-level checks across airway, melanoma, and dopaminergic-neuron datasets
