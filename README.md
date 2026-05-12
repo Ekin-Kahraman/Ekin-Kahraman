@@ -4,7 +4,7 @@ Computational biology + scientific software: RNA-seq, single-cell analysis, and 
 
 ## Currently building
 
-[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.1](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.1), [PyPI](https://pypi.org/project/rustscenic/)): rewriting fragile SCENIC/SCENIC+ regulatory-network workflows as installable, CPU-efficient Rust + PyO3 software, built in collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai.
+[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.4](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.4), [PyPI](https://pypi.org/project/rustscenic/)): rewriting fragile SCENIC/SCENIC+ regulatory-network workflows as installable, CPU-efficient Rust + PyO3 software, built in collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai.
 
 Legacy SCENIC stacks need Java, dask, and a long chain of transitive packages that frequently break on current Python; rustscenic ships the practical compute path without them.
 
