@@ -1,6 +1,6 @@
 # Ekin Kahraman
 
-Computational biology + scientific software: RNA-seq, single-cell analysis, and Rust/Python tooling.
+Computational biology + scientific software: Rust/Python tooling, RNA-seq workflows, single-cell analysis, and deployable clinical/product prototypes.
 
 ## Currently building
 
@@ -15,8 +15,11 @@ Legacy SCENIC stacks need Java, dask, and a long chain of transitive packages th
 
 ## Selected work
 
-- scverse: 4 doc improvements to [scanpy](https://github.com/scverse/scanpy) plotting, fix to [PyDESeq2](https://github.com/scverse/PyDESeq2) dataframe handling, open algorithmic PR on [AnnData `concat` API](https://github.com/scverse/anndata/pull/2416)
-- [Bulk RNA-seq differential expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression): DESeq2 on SARS-CoV-2 nasopharyngeal RNA-seq, 1,773 DE genes (n = 60 primary, 99.8% concordant with n = 484 sensitivity), [Zenodo DOI](https://doi.org/10.5281/zenodo.19429954)
-- [Airway cell-type deconvolution](https://github.com/Ekin-Kahraman/covid-airway-deconvolution): PyTorch deconvolution of 484 bulk RNA-seq samples into 14 airway cell types, r = 0.954 on pseudo-bulk 5-fold CV (upper bound, no batch effects)
+- [RNA-seq Nextflow pipeline](https://github.com/Ekin-Kahraman/rnaseq-nextflow-pipeline): containerised DSL2 workflow for FASTQ -> QC -> trimming -> HISAT2 -> featureCounts -> DESeq2 -> MultiQC, with Docker/Singularity/AWS Batch profiles, Seqera-ready schema, run reports/traces, and synthetic end-to-end CI.
+- [Bulk RNA-seq differential expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression): DESeq2 on SARS-CoV-2 nasopharyngeal RNA-seq, 1,773 DE genes (n = 60 primary, 99.8% concordant with n = 484 sensitivity), tracked output manifest, full rebuild CI, and [Zenodo DOI](https://doi.org/10.5281/zenodo.19429954).
+- [Airway cell-type deconvolution](https://github.com/Ekin-Kahraman/covid-airway-deconvolution): PyTorch deconvolution of 484 bulk RNA-seq samples into 14 airway cell types, r = 0.954 on pseudo-bulk 5-fold CV (upper bound), synthetic smoke tests, and model metadata for HVG/cell-type reuse.
+- [Single-cell immune profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling): Scanpy PBMC pipeline with Scrublet QC, Leiden resolution selection, marker-based annotation, PAGA trajectory inference, T-cell subclustering, full-pipeline CI smoke validation, and generated output checksums.
+- [SafetyNett](https://github.com/Ekin-Kahraman/safetynett): React/TypeScript + Supabase clinical safety-netting prototype from the OpenClaw Clinical Hackathon; CI covers lint, explicit TypeScript checking, production build, and tests.
+- scverse: 4 doc improvements to [scanpy](https://github.com/scverse/scanpy) plotting, fix to [PyDESeq2](https://github.com/scverse/PyDESeq2) dataframe handling, open algorithmic PR on [AnnData `concat` API](https://github.com/scverse/anndata/pull/2416).
 
 evk23umu@uea.ac.uk
