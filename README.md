@@ -4,13 +4,14 @@ Computational biology + scientific software: Rust/Python tooling, RNA-seq workfl
 
 ## Currently building
 
-[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.4](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.4), [PyPI](https://pypi.org/project/rustscenic/)): rewriting fragile SCENIC/SCENIC+ regulatory-network workflows as installable, CPU-efficient Rust + PyO3 software, built in collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai.
+[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.5](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.5), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246041)): turning fragile SCENIC/SCENIC+ regulatory-network workflows into installable, CPU-efficient Rust + PyO3 software, built in collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai.
 
 Legacy SCENIC stacks need Java, dask, and a long chain of transitive packages that frequently break on current Python; rustscenic ships the practical compute path without them.
 
-- `pip install rustscenic`; Python 3.10–3.13; Linux/macOS wheels for x86_64 and aarch64
+- `pip install rustscenic`; Python 3.10 to 3.13; Linux, macOS, and Windows wheels
 - Five runtime dependencies: numpy, pandas, pyarrow, scipy, anndata
 - Core stages in one package: GRN, AUCell, topics, cisTarget, enhancer links, eRegulons
+- Live docs, Zenodo DOI, typed wheels, and branch-protected CI across Rust, Python, docs, and optional extras
 - End-to-end multiome validated on human PBMC and mouse brain E18; stage-level checks across airway, melanoma, and dopaminergic-neuron datasets
 
 ## Selected work
