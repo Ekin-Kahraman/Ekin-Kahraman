@@ -1,22 +1,21 @@
 # Ekin Kahraman
 
-I build reliable data and ML software, with a focus on computational biology: Rust/Python packages, reproducible pipelines, single-cell analysis, and clinical prototypes backed by real validation.
+Rust/Python software engineer building data and ML systems for computational biology.
 
-Current focus: Rust-backed bioinformatics tools that reduce setup complexity and make regulatory-network analysis easier to run on standard CPU machines.
+I ship installable bioinformatics packages, reproducible pipelines, and clinical prototypes with CI, real-data validation, and published artefacts.
 
-## Flagship project
+## RustScenic
 
-[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.7](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.7), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246041)): CPU-first regulatory-network analysis for single-cell and multiome data, packaged as one Python install with Rust kernels for the compute-heavy stages.
+[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.7](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.7), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246041)): one Python package for CPU-first regulatory-network analysis on single-cell and multiome data, with Rust kernels for the compute-heavy stages.
 
 - `pip install rustscenic`; Python 3.10 to 3.13; Linux, macOS, and Windows wheels
-- Rust + PyO3 implementation of GRN, AUCell, topics, cisTarget, enhancer links, and eRegulons
-- Lower setup burden than legacy SCENIC stacks: no Java or dask runtime in the core install
-- Built in collaboration with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai
-- Five runtime dependencies: numpy, pandas, pyarrow, scipy, anndata
+- Rust + PyO3 stages: GRN, AUCell, topics, cisTarget, enhancer links, eRegulons
+- Core install avoids Java and dask; five runtime dependencies: numpy, pandas, pyarrow, scipy, anndata
 - Evidence: live docs, PyPI, Zenodo DOI, branch-protected CI, and committed validation artefacts
 - Real-data validation on human PBMC, mouse brain E18, and a collaborator human brain 10k run; stage checks across airway, melanoma, and dopaminergic-neuron datasets
+- Built with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai
 
-## Technical range
+## Stack
 
 - Core: Rust, PyO3, Python, pandas, numpy, scipy, scanpy, anndata
 - Pipelines: Nextflow DSL2, Docker, Singularity, GitHub Actions
