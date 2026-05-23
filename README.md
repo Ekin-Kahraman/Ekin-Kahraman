@@ -9,7 +9,7 @@ I ship installable bioinformatics packages, reproducible pipelines, and clinical
 [**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.7](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.7), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246041)): faster, lower-overhead regulatory-network analysis for single-cell and multiome data, shipped as one Python package with Rust kernels.
 
 - `11x` to `52x` faster than SCENIC+ on tested real-data core E2E rows; median speedup `27x`
-- Comparable or lower peak memory in tested real-data rows; human brain GEM-X peak RSS `2.18` vs `2.19 GB`
+- Memory-focused scaling run: `6.3 GB` peak RSS on `100k` cells versus `>40 GB` reported for legacy pyscenic-scale workloads
 - One install: `pip install rustscenic`; Python 3.10 to 3.13; Linux, macOS, and Windows wheels
 - Core install avoids Java, dask, CUDA, and Snakemake
 - Rust + PyO3 stages: GRN, AUCell, topics, cisTarget, enhancer links, eRegulons
