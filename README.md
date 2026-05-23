@@ -8,11 +8,13 @@ I ship installable bioinformatics packages, reproducible pipelines, and clinical
 
 [**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.7](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.7), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246041)): one Python package for CPU-first regulatory-network analysis on single-cell and multiome data, with Rust kernels for the compute-heavy stages.
 
+- `11x` to `52x` faster than SCENIC+ on tested real-data core E2E rows; median speedup `27x`
+- Human brain GEM-X row: `7.41s` vs `146.0s` compute, `11.89s` vs `150.36s` including prep, peak RSS `2.18` vs `2.19 GB`
+- Collaborator full run: `8,215` cells, `123,089` peaks, `4.31M` GRN edges, `927k` enhancer links, `16/17` expected brain TFs recovered
 - `pip install rustscenic`; Python 3.10 to 3.13; Linux, macOS, and Windows wheels
+- Core install avoids Java, dask, CUDA, and Snakemake; five runtime dependencies: numpy, pandas, pyarrow, scipy, anndata
 - Rust + PyO3 stages: GRN, AUCell, topics, cisTarget, enhancer links, eRegulons
-- Core install avoids Java and dask; five runtime dependencies: numpy, pandas, pyarrow, scipy, anndata
-- Evidence: live docs, PyPI, Zenodo DOI, branch-protected CI, and committed validation artefacts
-- Real-data validation on human PBMC, mouse brain E18, and a collaborator human brain 10k run; stage checks across airway, melanoma, and dopaminergic-neuron datasets
+- Evidence: [benchmarks](https://ekin-kahraman.github.io/rustscenic/benchmarks/), PyPI, docs, Zenodo DOI, branch-protected CI, committed validation artefacts
 - Built with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai
 
 ## Stack
