@@ -1,15 +1,15 @@
 # Ekin Kahraman
 
-Rust/Python software engineer building data and ML systems for computational biology.
+Rust/Python software engineer building scientific software and data systems for computational biology.
 
-I ship installable bioinformatics packages, reproducible pipelines, and clinical prototypes with CI, real-data validation, and published artefacts.
+I ship installable bioinformatics packages, reproducible pipelines, and clinical software prototypes with CI, real-data validation, and published artefacts.
 
 ## RustScenic
 
-[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.7](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.7), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246041)): faster, lower-overhead regulatory-network analysis for single-cell and multiome data, shipped as one Python package with Rust kernels.
+[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.7](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.7), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246040)): faster, lower-overhead regulatory-network analysis for single-cell and multiome data, shipped as one Python package with Rust kernels.
 
-- `11x` to `52x` faster than SCENIC+ on tested real-data core E2E rows; median speedup `27x`
-- `100k`-cell benchmark used `6.3 GB` RAM; comparable legacy workflows have reported `>40 GB`
+- [`11x` to `52x` faster](https://ekin-kahraman.github.io/rustscenic/benchmarks/#setup) than SCENIC+ on tested real-data core E2E rows; sampled inputs on one machine, median speedup `27x`
+- Historical RustScenic `v0.3.2` synthetic 100k-cell seven-stage scale check peaked at `7.09 GB` RSS; a `v0.5.0` rerun is still required
 - One install: `pip install rustscenic`; Python 3.10 to 3.13; Linux, macOS, and Windows wheels
 - Core install avoids Java, dask, CUDA, and Snakemake
 - Rust + PyO3 stages: GRN, AUCell, topics, cisTarget, enhancer links, eRegulons
@@ -20,7 +20,7 @@ I ship installable bioinformatics packages, reproducible pipelines, and clinical
 
 - Core: Rust, PyO3, Python, pandas, numpy, scipy, scanpy, anndata
 - Pipelines: Nextflow DSL2, Docker, Singularity, GitHub Actions
-- ML/product: PyTorch, React, TypeScript, Supabase
+- Applications: PyTorch, React, TypeScript, Supabase
 
 ## Selected work
 

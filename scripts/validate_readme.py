@@ -11,6 +11,20 @@ README = Path("README.md")
 
 def main() -> None:
     text = README.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    if lines[:3] != [
+        "# Ekin Kahraman",
+        "",
+        "Rust/Python software engineer building scientific software and data systems for computational biology.",
+    ]:
+        raise AssertionError("unexpected profile name or headline")
+
+    concept_doi = "https://doi.org/10.5281/zenodo.20246040"
+    if concept_doi not in text:
+        raise AssertionError("missing RustScenic Zenodo concept DOI")
+    if "https://doi.org/10.5281/zenodo.20246041" in text:
+        raise AssertionError("RustScenic profile must not pin the v0.4.5 Zenodo record DOI")
+
     required_repos = [
         "rustscenic",
         "rnaseq-nextflow-pipeline",
