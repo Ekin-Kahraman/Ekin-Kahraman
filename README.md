@@ -1,38 +1,44 @@
 # Ekin Kahraman
 
-Rust/Python software engineer building scientific software and data systems for computational biology.
+Computational biology and bioinformatics, focused on single-cell genomics and gene regulation.
 
-I ship installable bioinformatics packages, reproducible pipelines, and clinical software prototypes with CI, real-data validation, and published artefacts.
+I analyse gene expression data and build research software in Python, R, and Rust.
+I created and maintain RustScenic, alongside projects in differential expression,
+cell-type analysis, and reproducible RNA-seq workflows.
 
 ## RustScenic
 
-[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.4.7](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.4.7), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246040)): faster, lower-overhead regulatory-network analysis for single-cell and multiome data, shipped as one Python package with Rust kernels.
+[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([releases](https://github.com/Ekin-Kahraman/rustscenic/releases), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246040)): a toolkit for studying gene regulation using single-cell RNA and chromatin-accessibility data.
 
-- [`11x` to `52x` faster](https://ekin-kahraman.github.io/rustscenic/benchmarks/#setup) than SCENIC+ on tested real-data core E2E rows; sampled inputs on one machine, median speedup `27x`
-- Historical RustScenic `v0.3.2` synthetic 100k-cell seven-stage scale check peaked at `7.09 GB` RSS; a `v0.5.0` rerun is still required
-- One install: `pip install rustscenic`; Python 3.10 to 3.13; Linux, macOS, and Windows wheels
-- Core install avoids Java, dask, CUDA, and Snakemake
-- Rust + PyO3 stages: GRN, AUCell, topics, cisTarget, enhancer links, eRegulons
-- Evidence: [benchmarks](https://ekin-kahraman.github.io/rustscenic/benchmarks/), PyPI, docs, Zenodo DOI, branch-protected CI, committed validation artefacts
-- Built with the [Kuan-lin Huang Lab](https://icahn.mssm.edu/profiles/kuan-lin-huang) at Icahn Mount Sinai
+Developed in collaboration with the [Kuan-Lin Huang Lab](https://profiles.icahn.mssm.edu/kuan-lin-huang)
+at the Icahn School of Medicine at Mount Sinai.
+
+- [Gene-network inference on 1.3 million mouse-brain cells](https://github.com/Ekin-Kahraman/rustscenic/blob/0c8eb00539e3860c78e452c8661cc2735c169386/validation/scaling/IFB_REAL_RNA_GRN_2026-08-28.md) in under 47 minutes, with `4.28 GB` peak memory during analysis on 16 CPU cores.
+- [`3.3x` faster with about `81%` less peak physical memory than arboreto](https://github.com/Ekin-Kahraman/rustscenic/blob/0c8eb00539e3860c78e452c8661cc2735c169386/validation/scaling/IFB_REAL_RNA_GRN_2026-08-28.md), using the same hardware and 20,000-cell input for gene-network inference.
+- Available as a Python package for Linux, macOS, and Windows, with automated tests and documented workflows: `pip install rustscenic`.
+
+These benchmarks use the v0.5.0 release candidate.
+The million-cell run used prepared RNA data and 2,095 selected genes; preparing
+the full dataset separately peaked at `71.49 GB`. Linked benchmarks record the
+workload, hardware, and validation scope.
 
 ## Stack
 
-- Core: Rust, PyO3, Python, pandas, numpy, scipy, scanpy, anndata
-- Pipelines: Nextflow DSL2, Docker, Singularity, GitHub Actions
-- Applications: PyTorch, React, TypeScript, Supabase
+- Analysis: Python, R, Scanpy, AnnData, DESeq2, PyTorch
+- Research software: Rust, PyO3, NumPy, SciPy, pandas
+- Workflows: Nextflow, Docker, Singularity, GitHub Actions
 
 ## Selected work
 
 | Project | Stack | Evidence |
 | --- | --- | --- |
-| [RustScenic airway validation case study](https://github.com/Ekin-Kahraman/rustscenic-airway-case) | Python, pySCENIC comparison, CI | Real-atlas head-to-head on 31,602 airway cells and 59 regulons; mean per-cell Pearson r = 0.984; 27x AUCell timing difference; [Zenodo DOI](https://doi.org/10.5281/zenodo.20230540) |
-| External open-source contributions | scverse scientific Python ecosystem | 5 merged PRs to [scanpy](https://github.com/scverse/scanpy), 2 merged PRs to [PyDESeq2](https://github.com/scverse/PyDESeq2), and open algorithmic PR on [AnnData `concat` API](https://github.com/scverse/anndata/pull/2416) |
-| [RNA-seq Nextflow pipeline](https://github.com/Ekin-Kahraman/rnaseq-nextflow-pipeline) | Nextflow DSL2, Docker, Singularity, AWS Batch | FASTQ to QC, trimming, HISAT2, featureCounts, DESeq2, and MultiQC; Seqera-ready schema; synthetic end-to-end CI |
-| [Bulk RNA-seq differential expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression) | R, DESeq2, CI, reproducible artefacts | SARS-CoV-2 nasopharyngeal RNA-seq; 1,773 DE genes in primary cohort; 99.8% concordance with larger sensitivity set; [Zenodo DOI](https://doi.org/10.5281/zenodo.19429954) |
-| [Airway cell-type deconvolution](https://github.com/Ekin-Kahraman/covid-airway-deconvolution) | PyTorch, single-cell references, pseudo-bulk validation | Deconvolution of 484 bulk RNA-seq samples into 14 airway cell types; r = 0.954 on pseudo-bulk 5-fold CV; model metadata for reuse |
-| [Single-cell immune profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling) | Scanpy, Scrublet, Leiden, PAGA, CI | PBMC pipeline with QC, marker annotation, trajectory inference, T-cell subclustering, full-pipeline CI smoke validation, and output checksums |
-| [SafetyNett](https://github.com/Ekin-Kahraman/safetynett) | React, TypeScript, Supabase | Clinical safety-netting prototype; CI covers lint, explicit TypeScript checking, production build, and tests |
+| [RustScenic airway case study](https://github.com/Ekin-Kahraman/rustscenic-airway-case) | Python, RustScenic, pySCENIC | Explored gene-regulation differences in COVID-19 airway data; activity scores agreed closely with pySCENIC across 31,602 cells (mean per-cell Pearson r = 0.984). [DOI](https://doi.org/10.5281/zenodo.20230540) |
+| [Bulk RNA-seq differential expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression) | R, DESeq2, clusterProfiler | Identified an interferon-related COVID-19 host-response signature; checked effect estimates against the full cohort. [DOI](https://doi.org/10.5281/zenodo.19429954) |
+| [Airway cell-type deconvolution](https://github.com/Ekin-Kahraman/covid-airway-deconvolution) | Python, PyTorch | Estimated proportions of 14 airway cell types in 484 samples; cross-validation on simulated mixtures gave r = 0.954. |
+| [Single-cell immune profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling) | Python, Scanpy, Scrublet | Identified immune-cell populations and examined T-cell subtypes in blood single-cell data, with quality control and reproducible outputs. |
+| [RNA-seq Nextflow pipeline](https://github.com/Ekin-Kahraman/rnaseq-nextflow-pipeline) | Nextflow, Docker, Singularity, AWS Batch | Takes raw sequencing reads through quality control to differential expression and reports, with automated end-to-end tests on synthetic data. |
+| External open-source contributions | Scanpy, PyDESeq2, AnnData | 5 merged contributions to [Scanpy](https://github.com/scverse/scanpy), 2 to [PyDESeq2](https://github.com/scverse/PyDESeq2), plus an open [AnnData contribution](https://github.com/scverse/anndata/pull/2416). |
+| [SafetyNett](https://github.com/Ekin-Kahraman/safetynett) | React, TypeScript, Supabase | Hackathon prototype for patient follow-up and clinician alerts, with automated tests; not a deployed clinical device. |
 
 ## Contact
 

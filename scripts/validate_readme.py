@@ -1,4 +1,4 @@
-"""Validate the profile README keeps the portfolio evidence surfaced."""
+"""Validate the profile README keeps biological evidence and scope surfaced."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ def main() -> None:
     if lines[:3] != [
         "# Ekin Kahraman",
         "",
-        "Rust/Python software engineer building scientific software and data systems for computational biology.",
+        "Computational biology and bioinformatics, focused on single-cell genomics and gene regulation.",
     ]:
         raise AssertionError("unexpected profile name or headline")
 
@@ -27,6 +27,7 @@ def main() -> None:
 
     required_repos = [
         "rustscenic",
+        "rustscenic-airway-case",
         "rnaseq-nextflow-pipeline",
         "bulk-rnaseq-differential-expression",
         "covid-airway-deconvolution",
@@ -39,17 +40,31 @@ def main() -> None:
             raise AssertionError(f"missing portfolio link: {repo}")
 
     required_terms = [
-        "Kuan-lin Huang Lab",
+        "Kuan-Lin Huang Lab",
         "PyPI",
         "AWS Batch",
         "Zenodo DOI",
-        "model metadata",
-        "full-pipeline CI",
-        "TypeScript checking",
+        "Python, R, and Rust",
+        "1.3 million mouse-brain cells",
+        "during analysis",
+        "20,000-cell input",
+        "2,095 selected genes",
+        "71.49 GB",
+        "interferon-related",
+        "simulated mixtures",
+        "synthetic data",
+        "not a deployed clinical device",
+        "I created and maintain",
+        "https://github.com/Ekin-Kahraman/rustscenic/releases)",
+        "v0.5.0 release candidate",
+        "Icahn School of Medicine at Mount Sinai",
     ]
     for term in required_terms:
         if term not in text:
             raise AssertionError(f"missing evidence term: {term}")
+
+    if "/releases/tag/v0.5.0" in text or "/blob/v0.5.0/" in text:
+        raise AssertionError("profile must not link to the unpublished v0.5.0 tag")
 
     emails = re.findall(r"[\w.+-]+@[\w.-]+", text)
     if emails != ["evk23umu@uea.ac.uk"]:
