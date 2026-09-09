@@ -8,7 +8,7 @@ cell-type analysis, and reproducible RNA-seq workflows.
 
 ## RustScenic
 
-[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([releases](https://github.com/Ekin-Kahraman/rustscenic/releases), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246040)): a toolkit for studying gene regulation using single-cell RNA and chromatin-accessibility data.
+[**rustscenic**](https://github.com/Ekin-Kahraman/rustscenic) ([v0.5.0 release](https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.5.0), [PyPI](https://pypi.org/project/rustscenic/), [docs](https://ekin-kahraman.github.io/rustscenic/), [Zenodo DOI](https://doi.org/10.5281/zenodo.20246040)): a toolkit for studying gene regulation using single-cell RNA and chromatin-accessibility data.
 
 Developed in collaboration with the [Kuan-Lin Huang Lab](https://profiles.icahn.mssm.edu/kuan-lin-huang)
 at the Icahn School of Medicine at Mount Sinai.
@@ -17,7 +17,7 @@ at the Icahn School of Medicine at Mount Sinai.
 - [`3.3x` faster with about `81%` less peak physical memory than arboreto](https://github.com/Ekin-Kahraman/rustscenic/blob/0c8eb00539e3860c78e452c8661cc2735c169386/validation/scaling/IFB_REAL_RNA_GRN_2026-08-28.md), using the same hardware and 20,000-cell input for gene-network inference.
 - Available as a Python package for Linux, macOS, and Windows, with automated tests and documented workflows: `pip install rustscenic`.
 
-These benchmarks use the v0.5.0 release candidate.
+These benchmarks were recorded on the v0.5.0 release candidate.
 The million-cell run used prepared RNA data and 2,095 selected genes; preparing
 the full dataset separately peaked at `71.49 GB`. Linked benchmarks record the
 workload, hardware, and validation scope.

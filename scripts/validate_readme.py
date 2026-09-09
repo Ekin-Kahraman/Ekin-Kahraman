@@ -55,7 +55,7 @@ def main() -> None:
         "synthetic data",
         "not a deployed clinical device",
         "I created and maintain",
-        "https://github.com/Ekin-Kahraman/rustscenic/releases)",
+        "https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.5.0)",
         "v0.5.0 release candidate",
         "Icahn School of Medicine at Mount Sinai",
     ]
@@ -63,8 +63,9 @@ def main() -> None:
         if term not in text:
             raise AssertionError(f"missing evidence term: {term}")
 
-    if "/releases/tag/v0.5.0" in text or "/blob/v0.5.0/" in text:
-        raise AssertionError("profile must not link to the unpublished v0.5.0 tag")
+    benchmark_commit = "0c8eb00539e3860c78e452c8661cc2735c169386"
+    if f"/blob/{benchmark_commit}/validation/scaling/" not in text:
+        raise AssertionError("benchmarks must retain their recorded candidate source")
 
     emails = re.findall(r"[\w.+-]+@[\w.-]+", text)
     if emails != ["evk23umu@uea.ac.uk"]:
