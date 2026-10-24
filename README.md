@@ -6,7 +6,7 @@
 
 **Built to be the simplest, fastest software for studying gene regulation in single-cell data.**
 
-Creator and maintainer · Supervised by
+Supervised by
 [Kuan-Lin Huang](https://www.linkedin.com/in/kuanlinhuang) at the
 [Huang Lab at Mount Sinai](https://labs.icahn.mssm.edu/kuanhuanglab/).
 
@@ -29,7 +29,7 @@ Creator and maintainer · Supervised by
     <td valign="top">Open resource</td>
     <td>
       <strong>704 human cell labels</strong><br>
-      Public single-cell data → <a href="https://github.com/Ekin-Kahraman/rustscenic#cellxgene-census-derived-resource">reusable exploratory gene networks</a>.
+      Public single-cell data → <a href="https://github.com/Ekin-Kahraman/rustscenic#explore-how-genes-are-regulated-in-human-cells">reusable exploratory gene networks</a>.
     </td>
   </tr>
 </table>
