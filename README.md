@@ -6,7 +6,7 @@
 
 **Built to be the simplest, fastest software for studying gene regulation in single-cell data.**
 
-Rust · Python
+Published Python package, powered by Rust.
 
 Supervised by
 [Kuan-Lin Huang](https://www.linkedin.com/in/kuanlinhuang) at the
