@@ -1,15 +1,6 @@
 # Ekin Kahraman
 
-<p>
-  <img src="assets/languages/python.svg" width="18" height="18" alt=""> Python
-  &nbsp;·&nbsp;
-  <img src="assets/languages/r.svg" width="18" height="18" alt=""> R
-  &nbsp;·&nbsp;
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/languages/rust-dark.svg">
-    <img src="assets/languages/rust.svg" width="18" height="18" alt="">
-  </picture> Rust
-</p>
+**Creator of RustScenic.**
 
 ## [RustScenic](https://github.com/Ekin-Kahraman/rustscenic)
 
