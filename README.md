@@ -4,7 +4,7 @@
 
 ## [RustScenic](https://github.com/Ekin-Kahraman/rustscenic)
 
-**Built to be the simplest, fastest software for studying gene regulation in single-cell data.** 
+**Built to be the simplest, fastest software for studying gene regulation in single-cell data.**
 
 Rust · Python.
 
@@ -36,6 +36,7 @@ Supervised by
   </tr>
 </table>
 
+<br>
 
 **Open-source contributions · 7 merged**
 
@@ -43,10 +44,14 @@ Supervised by
 
 - [PyDESeq2](https://github.com/scverse/PyDESeq2/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman) — better error handling and documentation.
 
-
+<br>
 
 Open to graduate opportunities. [Get in touch](mailto:evk23umu@uea.ac.uk).
 
+<br>
 
+<h1 align="center">
+  <a href="https://github.com/Ekin-Kahraman#user-content-pinned-projects" title="View pinned repositories">See what I’ve built ↓</a>
+</h1>
 
-## See what I’ve built ↓
+<a id="pinned-projects"></a>
