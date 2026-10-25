@@ -60,13 +60,14 @@ for theme in ("light", "dark"):
         style = '.project-arrow{animation:down 1.8s ease-in-out infinite}@keyframes down{50%{transform:translateY(4px)}}@media(prefers-reduced-motion:reduce){.project-arrow{animation:none}}'
         write(f"projects-{theme}{'-mobile' if mobile else ''}.svg", banner_width, 64, "See what I’ve built — explore pinned projects", content, style)
 
-for name, colour, label, width in (("email", "#d14836", "EMAIL", 120), ("linkedin", "#0077b5", "LINKEDIN", 132)):
+for name, colour, label, width in (("email", "#d14836", "EMAIL", 132), ("linkedin", "#0077b5", "LINKEDIN", 132)):
     content = f'<rect width="{width}" height="40" fill="{colour}"/>'
     if name == "email":
-        content += '<g fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="13" width="19" height="14" rx="1.5"/><path d="M13 14.5 21.5 21 30 14.5"/></g>'
-    label_x = 44 if name == "email" else width / 2
+        content += '<g fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="27.5" y="13" width="19" height="14" rx="1.5"/><path d="M28.5 14.5 37 21 45.5 14.5"/></g>'
+    label_x = 56.5 if name == "email" else width / 2
     label_anchor = "start" if name == "email" else "middle"
-    content += text(label_x, 20, label, 13, "white", 800, f'letter-spacing="1.6" text-anchor="{label_anchor}" dominant-baseline="central"')
+    label_length = ' textLength="48" lengthAdjust="spacing"' if name == "email" else ""
+    content += text(label_x, 20, label, 13, "white", 800, f'letter-spacing="1.6" text-anchor="{label_anchor}" dominant-baseline="central"{label_length}')
     write(f"{name}.svg", width, 40, "Email Ekin Kahraman" if name == "email" else "Ekin Kahraman on LinkedIn", content)
 
 arrow = '<g class="feature-direction"><path d="M20 18V74M7 61L20 74L33 61" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>'
