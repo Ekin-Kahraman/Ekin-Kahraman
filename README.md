@@ -64,8 +64,6 @@
   </picture>
 </a></p>
 
-<p align="center"><sub>1,212 contributions · 2026</sub></p>
-
 <br>
 
 ---
