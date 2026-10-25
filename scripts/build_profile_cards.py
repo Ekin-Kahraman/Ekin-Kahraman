@@ -62,8 +62,13 @@ for theme in ("light", "dark"):
 
 for name, colour, label, width in (("email", "#d14836", "EMAIL", 120), ("linkedin", "#0077b5", "LINKEDIN", 132)):
     content = f'<rect width="{width}" height="40" fill="{colour}"/>'
-    if name == "email": content += text(13, 27, "✉", 20, "white", 400)
+    if name == "email":
+        content += '<g fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="13" width="19" height="14" rx="1.5"/><path d="M13 14.5 21.5 21 30 14.5"/></g>'
     content += text(44 if name == "email" else 20, 26, label, 13, "white", 800, 'letter-spacing="1.6"')
     write(f"{name}.svg", width, 40, "Email Ekin Kahraman" if name == "email" else "Ekin Kahraman on LinkedIn", content)
+
+arrow = '<g class="feature-direction"><path d="M20 24V54M11 45L20 54L29 45" fill="none" stroke="#d46f40" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></g>'
+arrow_style = '.feature-direction{animation:feature-point 2.4s ease-in-out infinite}@keyframes feature-point{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}@media(prefers-reduced-motion:reduce){.feature-direction{animation:none}}'
+write("rustscenic-arrow.svg", 40, 88, "Explore RustScenic below", arrow, arrow_style)
 
 print("Built themed, responsive profile cards.")

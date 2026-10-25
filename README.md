@@ -18,7 +18,7 @@
   <strong>Creator of RustScenic.</strong>
 </p>
 
-<br><br>
+<p align="center"><picture><img src="assets/profile/rustscenic-arrow.svg" width="40" height="88" alt=""></picture></p>
 
 <p align="center"><a href="https://github.com/Ekin-Kahraman/rustscenic">
   <picture>
@@ -51,7 +51,7 @@
 
 <br>
 
-<h3 align="center"><img src="assets/profile/statistics-icon.svg" width="34" height="34" alt=""> Statistics</h3>
+<h3 align="center"><sub><img src="assets/profile/statistics-icon.svg" width="34" height="34" alt=""></sub> Statistics</h3>
 
 <p align="center"><a href="https://github.com/Ekin-Kahraman?tab=overview&amp;from=2026-01-01&amp;to=2026-12-31">
   <picture>
@@ -74,7 +74,7 @@
 
 <p align="center"><a href="https://github.com/scverse/scanpy/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman">Scanpy</a> · <a href="https://github.com/scverse/PyDESeq2/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman">PyDESeq2</a></p>
 
-<br>
+<br><br><br>
 
 <p align="center">
   <picture>
