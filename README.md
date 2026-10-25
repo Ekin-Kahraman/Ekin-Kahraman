@@ -5,6 +5,8 @@
   </picture>
 </p>
 
+<br>
+
 <p align="center">
   <picture>
     <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/profile/hello-still-dark.svg">
@@ -16,7 +18,7 @@
   <strong>Creator of RustScenic.</strong>
 </p>
 
-<br>
+<br><br>
 
 <p align="center"><a href="https://github.com/Ekin-Kahraman/rustscenic">
   <picture>
@@ -27,17 +29,27 @@
   </picture>
 </a></p>
 
+<br>
+
 <p align="center">
   <strong>Leading RustScenic’s development</strong> at <a href="https://icahn.mssm.edu/">Mount Sinai</a>’s <a href="https://labs.icahn.mssm.edu/kuanhuanglab/">Huang Lab</a>, directly supervised by <a href="https://profiles.icahn.mssm.edu/kuan-lin-huang">Kuan&#8209;Lin&nbsp;Huang</a>&nbsp;<a href="https://www.linkedin.com/in/kuanlinhuang/"><img src="assets/profile/linkedin-mark.svg" width="16" height="16" alt="Kuan-Lin Huang on LinkedIn"></a>.
 </p>
 
+<br>
+
 ---
+
+<br>
 
 <h3 align="center"><img src="https://cdn.jsdelivr.net/gh/Tarikul-Islam-Anik/Animated-Fluent-Emojis@master/Emojis/Hand%20gestures/Handshake.png" width="34" height="34" alt=""> Connect With Me</h3>
 
 <p align="center"><a href="mailto:evk23umu@uea.ac.uk?subject=Opportunity%20for%20Ekin%20Kahraman"><img src="assets/profile/email.svg" height="40" alt="Email Ekin Kahraman"></a> <a href="https://www.linkedin.com/in/ekinka"><img src="assets/profile/linkedin.svg" height="40" alt="LinkedIn"></a></p>
 
+<br>
+
 ---
+
+<br>
 
 <h3 align="center"><img src="assets/profile/statistics-icon.svg" width="34" height="34" alt=""> Statistics</h3>
 
@@ -52,19 +64,25 @@
 
 <p align="center"><sub>1,212 contributions · 2026</sub></p>
 
+<br>
+
 ---
+
+<br>
 
 <h3 align="center">Open-source software contributions</h3>
 
 <p align="center"><a href="https://github.com/scverse/scanpy/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman">Scanpy</a> · <a href="https://github.com/scverse/PyDESeq2/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman">PyDESeq2</a></p>
 
-<p align="center"><a href="https://github.com/Ekin-Kahraman#user-content-pinned-projects">
+<br>
+
+<p align="center">
   <picture>
     <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/projects-dark-mobile.svg">
     <source media="(max-width: 520px)" srcset="assets/profile/projects-light-mobile.svg">
     <source media="(prefers-color-scheme: dark)" srcset="assets/profile/projects-dark.svg">
     <img src="assets/profile/projects-light.svg" width="100%" alt="↓ See what I’ve built ↓">
   </picture>
-</a></p>
+</p>
 
-<a id="pinned-projects"></a>
+<br>

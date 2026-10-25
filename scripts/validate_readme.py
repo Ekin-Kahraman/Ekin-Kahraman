@@ -11,8 +11,7 @@ for term in ("Creator of RustScenic.", "Leading RustScenic’s development", "Hu
     assert term in text, f"Missing approved content: {term}"
 assert "Open to" not in text and "Telegram" not in text
 assert text.count("mailto:evk23umu@uea.ac.uk") == 1
-assert 'id="pinned-projects"' in text
-assert "#user-content-pinned-projects" in text
+assert "pinned-projects" not in text, "The project invitation must not change the URL to a pinned anchor"
 for path in re.findall(r'(?:src|srcset)="(assets/[^\"]+)"', text):
     assert (ROOT / path).is_file(), f"Missing image: {path}"
 for path in (ROOT / "assets/profile").glob("*.svg"):
@@ -32,7 +31,7 @@ still = ET.parse(ROOT / "assets/profile/statistics-still.svg").getroot()
 assert not any(n.tag.rsplit("}", 1)[-1] in ("animate", "animateTransform", "animateMotion") for n in still.iter())
 workstation = (ROOT / "assets/profile/workstation.svg").read_text()
 assert "plant-wind-filter" in workstation and "hardware-slate" in workstation
-assert "Hi, I’m Ekin!" in workstation and "mouse-use" in workstation
+assert "Hi, I’m Ekin!" not in workstation and "mouse-use" in workstation
 language_data = json.loads((ROOT / "assets/profile/language-metadata.json").read_text())
 counts = {entry["language"]: entry["contributions"] for entry in language_data["languages"]}
 assert counts["Rust"] == 2 and counts["other"] == 4
