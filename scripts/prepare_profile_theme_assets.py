@@ -87,6 +87,12 @@ def fixed_theme(css, theme):
     return light if theme == "light" else light + "\n" + css[start:end-1]
 
 
+# Keep the redundant date range out of every rendered statistics variant.
+for parent in graphic.iter():
+    for child in list(parent):
+        if child.tag == NS + "text" and re.fullmatch(r"\d{4}-\d{2}-\d{2}\s*/\s*\d{4}-\d{2}-\d{2}", "".join(child.itertext()).strip()):
+            parent.remove(child)
+
 # The statistics card intentionally keeps its own black canvas in both GitHub themes.
 for style in graphic.findall(NS + "style"):
     css = fixed_theme(style.text or "", "dark")
