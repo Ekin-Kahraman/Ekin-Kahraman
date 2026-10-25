@@ -18,7 +18,9 @@
   <strong>Creator of RustScenic.</strong>
 </p>
 
-<p align="center"><picture><img src="assets/profile/rustscenic-arrow.svg" width="40" height="88" alt=""></picture></p>
+<p align="center"><picture><img src="assets/profile/rustscenic-arrow.svg" width="48" height="132" alt=""></picture></p>
+
+<br>
 
 <p align="center"><a href="https://github.com/Ekin-Kahraman/rustscenic">
   <picture>
