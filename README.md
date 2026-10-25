@@ -43,9 +43,9 @@
 
 <br>
 
-<h3 align="center"><sub><img src="https://cdn.jsdelivr.net/gh/Tarikul-Islam-Anik/Animated-Fluent-Emojis@master/Emojis/Hand%20gestures/Handshake.png" width="34" height="34" alt=""></sub> Connect With Me</h3>
+<h3 align="center"><sup><img align="middle" src="https://cdn.jsdelivr.net/gh/Tarikul-Islam-Anik/Animated-Fluent-Emojis@master/Emojis/Hand%20gestures/Handshake.png" width="34" height="34" alt=""></sup>&nbsp;Connect With Me</h3>
 
-<p align="center"><a href="mailto:evk23umu@uea.ac.uk?subject=Opportunity%20for%20Ekin%20Kahraman"><img src="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/b8b9ccb2391489415dd13b62a50c9e52993feb66/assets/profile/email.svg" height="40" alt="Email Ekin Kahraman"></a> <a href="https://www.linkedin.com/in/ekinka"><img src="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/b8b9ccb2391489415dd13b62a50c9e52993feb66/assets/profile/linkedin.svg" height="40" alt="LinkedIn"></a></p>
+<p align="center"><a href="mailto:evk23umu@uea.ac.uk?subject=Opportunity%20for%20Ekin%20Kahraman"><img src="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/af73210b34b26a8e317898aa57520f76cdaf68cf/assets/profile/email.svg" width="132" height="40" alt="Email Ekin Kahraman"></a>&emsp;<a href="https://www.linkedin.com/in/ekinka"><img src="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/af73210b34b26a8e317898aa57520f76cdaf68cf/assets/profile/linkedin.svg" width="132" height="40" alt="LinkedIn"></a></p>
 
 <br>
 
