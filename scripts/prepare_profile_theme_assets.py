@@ -87,6 +87,12 @@ def fixed_theme(css, theme):
     return light if theme == "light" else light + "\n" + css[start:end-1]
 
 
+# The statistics card intentionally keeps its own black canvas in both GitHub themes.
+for style in graphic.findall(NS + "style"):
+    css = fixed_theme(style.text or "", "dark")
+    css = re.sub(r"(\.(?:fill|stroke)-bg\s*\{\s*(?:fill|stroke):\s*)#[0-9a-fA-F]{6}", r"\g<1>#000000", css)
+    style.text = css
+
 (ASSETS / "statistics.svg").write_text(ET.tostring(graphic, encoding="unicode") + "\n")
 still = copy.deepcopy(graphic)
 remove_motion(still)

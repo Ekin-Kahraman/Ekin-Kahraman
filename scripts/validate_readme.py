@@ -48,6 +48,8 @@ for theme in ("light", "dark"):
         labels = ET.fromstring(greeting).iter(ns + "text")
         assert all(label.get("fill") == expected_ink for label in labels)
         assert "Rust 2" in chart and "other 4" in chart
+        backgrounds = re.findall(r"\.fill-bg\s*\{\s*fill:\s*(#[0-9a-fA-F]{6})", chart)
+        assert backgrounds and set(backgrounds) == {"#000000"}, "Statistics canvas must stay pure black"
         if static:
             assert not any(n.tag.rsplit("}", 1)[-1] in ("animate", "animateTransform", "animateMotion") for n in ET.fromstring(chart).iter())
 print("Profile content, links, responsive assets, animations and zero-day geometry validated.")

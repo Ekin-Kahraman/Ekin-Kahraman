@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ekin Kahraman, GitHub contributions in 2026" width="1280" height="850" viewBox="0 0 1280 850" data-column-growth-scale="1.2" data-weak-day-scale="10" data-remaining-day-scale="2"><style>* { font-family: "Ubuntu", "Helvetica", "Arial", sans-serif; }
 .fill-fg { fill: #1f2328; }
 .stroke-fg { stroke: #1f2328; }
-.fill-bg { fill: #ffffff; }
-.stroke-bg { stroke: #ffffff; }
+.fill-bg { fill: #000000; }
+.stroke-bg { stroke: #000000; }
 .fill-strong { fill: #ac4d26; }
 .fill-weak { fill: #59636e; }
 .stroke-weak { stroke: #59636e; }
@@ -46,8 +46,8 @@ fill-opacity: 0.5;
 
 .fill-fg { fill: #f0f6fc; }
 .stroke-fg { stroke: #f0f6fc; }
-.fill-bg { fill: #0d1117; }
-.stroke-bg { stroke: #0d1117; }
+.fill-bg { fill: #000000; }
+.stroke-bg { stroke: #000000; }
 .fill-strong { fill: #f0ab89; }
 .fill-weak { fill: #9198a1; }
 .stroke-weak { stroke: #9198a1; }

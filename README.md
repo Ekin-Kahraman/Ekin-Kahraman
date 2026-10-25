@@ -16,6 +16,8 @@
   <strong>Creator of RustScenic.</strong>
 </p>
 
+<br>
+
 <p align="center"><a href="https://github.com/Ekin-Kahraman/rustscenic">
   <picture>
     <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/rustscenic-dark-mobile.svg">
@@ -61,7 +63,7 @@
     <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/projects-dark-mobile.svg">
     <source media="(max-width: 520px)" srcset="assets/profile/projects-light-mobile.svg">
     <source media="(prefers-color-scheme: dark)" srcset="assets/profile/projects-dark.svg">
-    <img src="assets/profile/projects-light.svg" width="100%" alt="See what I’ve built ↓">
+    <img src="assets/profile/projects-light.svg" width="100%" alt="↓ See what I’ve built ↓">
   </picture>
 </a></p>
 

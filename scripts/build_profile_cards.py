@@ -13,7 +13,7 @@ logo_content = "".join(ET.tostring(c, encoding="unicode") for c in logo)
 def write(name, width, height, title, content, style=""):
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title"><title id="title">{title}</title><style>text{{font-family:{FONT}}}{style}</style>{content}</svg>'''
     ET.fromstring(svg)
-    (ASSETS / name).write_text(svg)
+    (ASSETS / name).write_text(svg + "\n")
 
 
 def text(x, y, value, size, colour, weight=400, extra=""):
@@ -55,7 +55,8 @@ for theme in ("light", "dark"):
         banner_width = 320 if mobile else 700
         content = f'<rect x=".5" y=".5" width="{banner_width-1}" height="63" rx="5" fill="{green_bg}" stroke="#3fb950" stroke-opacity=".4"/>'
         content += text(banner_width/2, 39, "See what I’ve built", 20, green_text, 600, 'letter-spacing="-.35" text-anchor="middle"')
-        content += text(banner_width-38, 41, "↓", 27, green_text, 400, 'class="project-arrow"')
+        for arrow_x in (banner_width/2-112, banner_width/2+112):
+            content += text(arrow_x, 41, "↓", 27, green_text, 400, 'class="project-arrow" text-anchor="middle"')
         style = '.project-arrow{animation:down 1.8s ease-in-out infinite}@keyframes down{50%{transform:translateY(4px)}}@media(prefers-reduced-motion:reduce){.project-arrow{animation:none}}'
         write(f"projects-{theme}{'-mobile' if mobile else ''}.svg", banner_width, 64, "See what I’ve built — explore pinned projects", content, style)
 
