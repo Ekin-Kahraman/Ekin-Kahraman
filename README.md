@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile/workstation-still.svg">
-    <img src="assets/profile/workstation.svg" width="700" alt="A visitor exploring Ekin Kahraman’s GitHub profile and LinkedIn at a pixel-art workstation.">
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/main/assets/profile/workstation-still.svg?v=a14114d">
+    <img src="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/main/assets/profile/workstation.svg?v=a14114d" width="700" alt="A visitor exploring Ekin Kahraman’s GitHub profile and LinkedIn at a pixel-art workstation.">
   </picture>
 </p>
 
