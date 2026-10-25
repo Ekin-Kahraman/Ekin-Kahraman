@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile/workstation-still.svg">
-    <img src="assets/profile/workstation.svg" width="700" height="313" alt="A visitor exploring Ekin Kahraman’s GitHub profile and LinkedIn at a pixel-art workstation.">
+    <img src="assets/profile/workstation.svg" width="700" alt="A visitor exploring Ekin Kahraman’s GitHub profile and LinkedIn at a pixel-art workstation.">
   </picture>
 </p>
 
@@ -10,7 +10,7 @@
     <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/profile/hello-still-dark.svg">
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile/hello-still-light.svg">
     <source media="(prefers-color-scheme: dark)" srcset="assets/profile/hello-dark.svg">
-    <img src="assets/profile/hello-light.svg" width="360" height="49" alt="Hi, I’m Ekin!">
+    <img src="assets/profile/hello-light.svg" width="360" alt="Hi, I’m Ekin!">
   </picture>
   <br>
   <strong>Creator of RustScenic.</strong>
