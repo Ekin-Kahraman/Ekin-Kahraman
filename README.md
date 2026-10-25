@@ -1,57 +1,66 @@
-# Ekin Kahraman
+<p align="center">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile/workstation-still.svg">
+    <img src="assets/profile/workstation.svg" width="480" alt="A visitor exploring Ekin Kahraman’s GitHub profile and LinkedIn at a pixel-art workstation.">
+  </picture>
+</p>
 
-**Creator of RustScenic.**
+<p align="center">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/profile/hello-still-dark.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile/hello-still-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/hello-dark.svg">
+    <img src="assets/profile/hello-light.svg" width="360" alt="Hi, I’m Ekin.">
+  </picture>
+  <br>
+  <strong>Creator of RustScenic.</strong>
+</p>
 
-## [RustScenic](https://github.com/Ekin-Kahraman/rustscenic)
+<a href="https://github.com/Ekin-Kahraman/rustscenic">
+  <picture>
+    <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/rustscenic-dark-mobile.svg">
+    <source media="(max-width: 520px)" srcset="assets/profile/rustscenic-light-mobile.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/rustscenic-dark.svg">
+    <img src="assets/profile/rustscenic-light.svg" width="700" alt="RustScenic. The simplest, fastest software for studying gene regulation in single-cell data. Published Python package, powered by Rust. 3.3× faster · 81% lower peak memory. Explore RustScenic →">
+  </picture>
+</a>
 
-**Built to be the simplest, fastest software for studying gene regulation in single-cell data.**
+<p>
+  <strong>Leading RustScenic’s development</strong> at <a href="https://icahn.mssm.edu/">Mount Sinai</a>’s <a href="https://labs.icahn.mssm.edu/kuanhuanglab/">Huang Lab</a>, directly supervised by <a href="https://profiles.icahn.mssm.edu/kuan-lin-huang">Kuan&#8209;Lin&nbsp;Huang</a>&nbsp;<a href="https://www.linkedin.com/in/kuanlinhuang/"><img src="assets/profile/linkedin-mark.svg" width="16" height="16" alt="Kuan-Lin Huang on LinkedIn"></a>.
+</p>
 
-Published Python package, powered by Rust.
+---
 
-Supervised by
-[Kuan-Lin Huang](https://www.linkedin.com/in/kuanlinhuang) at the
-[Huang Lab at Mount Sinai](https://labs.icahn.mssm.edu/kuanhuanglab/).
+### <img src="https://cdn.jsdelivr.net/gh/Tarikul-Islam-Anik/Animated-Fluent-Emojis@master/Emojis/Hand%20gestures/Handshake.png" width="34" height="34" alt=""> Connect With Me
 
-<table>
-  <tr>
-    <td valign="top">Efficiency</td>
-    <td>
-      <strong>3.3× faster · 81% lower peak memory</strong><br>
-      Compared with arboreto in a matched 20,000-cell gene-network benchmark. <a href="https://github.com/Ekin-Kahraman/rustscenic/blob/0c8eb00539e3860c78e452c8661cc2735c169386/validation/scaling/IFB_REAL_RNA_GRN_2026-08-28.md#same-node-rustscenic-versus-arboreto">Matched comparison</a>.
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">Scale</td>
-    <td>
-      <strong>1.3 million cells in under 47 minutes</strong><br>
-      Gene-network inference on 16 CPU cores at the <a href="https://doc.cluster.france-bioinformatique.fr/">IFB Core Cluster</a>. Resource generation scaled with Mount Sinai’s <a href="https://labs.icahn.mssm.edu/minervalab/">Minerva supercomputer</a>. <a href="https://github.com/Ekin-Kahraman/rustscenic/blob/0c8eb00539e3860c78e452c8661cc2735c169386/validation/scaling/IFB_REAL_RNA_GRN_2026-08-28.md#cell-count-scaling-on-all-1306-million-cells">Benchmark</a>.
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">Open resource</td>
-    <td>
-      <strong>Reusable gene networks for 704 human cell labels</strong><br>
-      From public single-cell data. <a href="https://github.com/Ekin-Kahraman/rustscenic#explore-how-genes-are-regulated-in-human-cells">Exploratory resource</a>.
-    </td>
-  </tr>
-</table>
+<p><a href="mailto:evk23umu@uea.ac.uk?subject=Opportunity%20for%20Ekin%20Kahraman"><img src="assets/profile/email.svg" height="40" alt="Email Ekin Kahraman"></a> <a href="https://www.linkedin.com/in/ekinka"><img src="assets/profile/linkedin.svg" height="40" alt="LinkedIn"></a></p>
 
-<br>
+---
 
-**Open-source contributions · 7 merged**
+### Statistics
 
-- [Scanpy](https://github.com/scverse/scanpy/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman) — clearer plotting examples.
+<a href="https://github.com/Ekin-Kahraman?tab=overview&amp;from=2026-01-01&amp;to=2026-12-31">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile/statistics-still.svg">
+    <img src="assets/profile/statistics.svg" width="700" alt="Ekin Kahraman’s 2026 contribution skyline, programming languages and contribution types. Zero-contribution days remain flat.">
+  </picture>
+</a>
 
-- [PyDESeq2](https://github.com/scverse/PyDESeq2/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman) — better error handling and documentation.
+<sub>1,212 contributions · 2026</sub>
 
-<br>
+---
 
-Open to graduate opportunities. [Get in touch](mailto:evk23umu@uea.ac.uk).
+### Open-source software contributions
 
-<br>
+[Scanpy](https://github.com/scverse/scanpy/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman) · [PyDESeq2](https://github.com/scverse/PyDESeq2/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman)
 
-<h1 align="center">
-  <a href="https://github.com/Ekin-Kahraman#user-content-pinned-projects" title="View pinned repositories">See what I’ve built ↓</a>
-</h1>
+<a href="https://github.com/Ekin-Kahraman#user-content-pinned-projects">
+  <picture>
+    <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/projects-dark-mobile.svg">
+    <source media="(max-width: 520px)" srcset="assets/profile/projects-light-mobile.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/projects-dark.svg">
+    <img src="assets/profile/projects-light.svg" width="700" alt="See what I’ve built ↓">
+  </picture>
+</a>
 
 <a id="pinned-projects"></a>

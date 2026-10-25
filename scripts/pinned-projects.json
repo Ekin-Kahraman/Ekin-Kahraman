@@ -1,0 +1,32 @@
+[
+  {
+    "name": "rustscenic",
+    "url": "https://github.com/Ekin-Kahraman/rustscenic",
+    "description": "The simplest, fastest software for studying gene regulation in single-cell data \u00b7 Rust & Python"
+  },
+  {
+    "name": "safetynett",
+    "url": "https://github.com/Ekin-Kahraman/safetynett",
+    "description": "Hackathon finalist prototype \u00b7 AI-automated GP follow-ups with Claude"
+  },
+  {
+    "name": "covid-airway-deconvolution",
+    "url": "https://github.com/Ekin-Kahraman/covid-airway-deconvolution",
+    "description": "Airway cell composition in COVID-19 \u00b7 Python & PyTorch"
+  },
+  {
+    "name": "rnaseq-nextflow-pipeline",
+    "url": "https://github.com/Ekin-Kahraman/rnaseq-nextflow-pipeline",
+    "description": "RNA-seq Nextflow pipeline"
+  },
+  {
+    "name": "bulk-rnaseq-differential-expression",
+    "url": "https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression",
+    "description": "COVID-19 host response \u00b7 R & DESeq2"
+  },
+  {
+    "name": "single-cell-rnaseq-immune-profiling",
+    "url": "https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling",
+    "description": "Single-cell immune profiling \u00b7 Python & Scanpy"
+  }
+]

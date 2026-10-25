@@ -1,76 +1,36 @@
-"""Validate the profile README keeps biological evidence and scope surfaced."""
-
-from __future__ import annotations
-
-import re
+"""Check the published profile's links, assets and contribution geometry."""
+import json
 from pathlib import Path
+import re
+import xml.etree.ElementTree as ET
 
-
-README = Path("README.md")
-
-
-def main() -> None:
-    text = README.read_text(encoding="utf-8")
-    lines = text.splitlines()
-    if lines[:3] != [
-        "# Ekin Kahraman",
-        "",
-        "Computational biology and bioinformatics, focused on single-cell genomics and gene regulation.",
-    ]:
-        raise AssertionError("unexpected profile name or headline")
-
-    concept_doi = "https://doi.org/10.5281/zenodo.20246040"
-    if concept_doi not in text:
-        raise AssertionError("missing RustScenic Zenodo concept DOI")
-    if "https://doi.org/10.5281/zenodo.20246041" in text:
-        raise AssertionError("RustScenic profile must not pin the v0.4.5 Zenodo record DOI")
-
-    required_repos = [
-        "rustscenic",
-        "rustscenic-airway-case",
-        "rnaseq-nextflow-pipeline",
-        "bulk-rnaseq-differential-expression",
-        "covid-airway-deconvolution",
-        "single-cell-rnaseq-immune-profiling",
-        "safetynett",
-    ]
-    for repo in required_repos:
-        needle = f"https://github.com/Ekin-Kahraman/{repo}"
-        if needle not in text:
-            raise AssertionError(f"missing portfolio link: {repo}")
-
-    required_terms = [
-        "Kuan-Lin Huang Lab",
-        "PyPI",
-        "AWS Batch",
-        "Zenodo DOI",
-        "Python, R, and Rust",
-        "1.3 million mouse-brain cells",
-        "during analysis",
-        "20,000-cell input",
-        "2,095 selected genes",
-        "71.49 GB",
-        "interferon-related",
-        "simulated mixtures",
-        "synthetic data",
-        "not a deployed clinical device",
-        "I created and maintain",
-        "https://github.com/Ekin-Kahraman/rustscenic/releases/tag/v0.5.0)",
-        "v0.5.0 release candidate",
-        "Icahn School of Medicine at Mount Sinai",
-    ]
-    for term in required_terms:
-        if term not in text:
-            raise AssertionError(f"missing evidence term: {term}")
-
-    benchmark_commit = "0c8eb00539e3860c78e452c8661cc2735c169386"
-    if f"/blob/{benchmark_commit}/validation/scaling/" not in text:
-        raise AssertionError("benchmarks must retain their recorded candidate source")
-
-    emails = re.findall(r"[\w.+-]+@[\w.-]+", text)
-    if emails != ["evk23umu@uea.ac.uk"]:
-        raise AssertionError("unexpected profile email state")
-
-
-if __name__ == "__main__":
-    main()
+ROOT = Path(__file__).resolve().parents[1]
+text = (ROOT / "README.md").read_text()
+assert not re.search(r"<(?:script|style)\b|data:image/", text, re.I), "README must use GitHub-compatible markup"
+for term in ("Creator of RustScenic.", "Leading RustScenic’s development", "Huang Lab", "Kuan-Lin Huang", "Connect With Me", "Statistics", "Open-source software contributions", "See what I’ve built", "3.3× faster", "81% lower peak memory"):
+    assert term in text, f"Missing approved content: {term}"
+assert "Open to" not in text and "Telegram" not in text
+assert text.count("mailto:evk23umu@uea.ac.uk") == 1
+assert 'id="pinned-projects"' in text
+assert "#user-content-pinned-projects" in text
+for path in re.findall(r'(?:src|srcset)="(assets/[^\"]+)"', text):
+    assert (ROOT / path).is_file(), f"Missing image: {path}"
+for path in (ROOT / "assets/profile").glob("*.svg"):
+    graphic = ET.parse(path).getroot()
+    assert not any(n.tag.rsplit("}", 1)[-1] == "script" for n in graphic.iter()), path
+projects = json.loads((ROOT / "scripts/pinned-projects.json").read_text())
+assert len(projects) == 6 and projects[0]["name"] == "rustscenic" and projects[1]["name"] == "safetynett"
+assert all(len(p["description"]) <= 350 for p in projects)
+ns = "{http://www.w3.org/2000/svg}"
+graphic = ET.parse(ROOT / "assets/profile/statistics.svg").getroot()
+assert graphic.get("data-weak-day-scale") == "10"
+assert graphic.get("data-remaining-day-scale") == "2"
+zeros = [r for r in graphic.iter(ns + "rect") if r.get("class") in ("rb-l0-left", "rb-l0-right")]
+assert zeros and all(float(r.get("height")) == 2.6 for r in zeros), "Empty days must stay flat"
+assert all(n.get("repeatCount") == "indefinite" for n in graphic.iter() if n.tag.rsplit("}", 1)[-1] in ("animate", "animateTransform") and n.get("attributeName") in ("height", "transform"))
+still = ET.parse(ROOT / "assets/profile/statistics-still.svg").getroot()
+assert not any(n.tag.rsplit("}", 1)[-1] in ("animate", "animateTransform", "animateMotion") for n in still.iter())
+workstation = (ROOT / "assets/profile/workstation.svg").read_text()
+assert "plant-wind-filter" in workstation and "hardware-slate" in workstation
+assert "Hi, I’m Ekin." in workstation and "mouse-use" in workstation
+print("Profile content, links, responsive assets, animations and zero-day geometry validated.")
