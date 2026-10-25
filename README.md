@@ -12,11 +12,11 @@
     <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/profile/hello-still-dark.svg">
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile/hello-still-light.svg">
     <source media="(prefers-color-scheme: dark)" srcset="assets/profile/hello-dark.svg">
-    <img src="assets/profile/hello-light.svg" width="360" alt="Hi, I’m Ekin!">
+    <img src="assets/profile/hello-light.svg" width="520" alt="Hi, I’m Ekin!">
   </picture>
-  <br>
-  <strong>Creator of RustScenic.</strong>
 </p>
+
+<h3 align="center">Creator of RustScenic.</h3>
 
 <p align="center"><picture><img src="assets/profile/rustscenic-arrow.svg" width="48" height="132" alt=""></picture></p>
 
