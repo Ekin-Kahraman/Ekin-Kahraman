@@ -25,29 +25,36 @@ for theme in ("light", "dark"):
     bg, ink, muted, border = ("#24180f", "#f0ab89", "#9198a1", "#704025") if dark else ("#fff4ec", "#8b3d1c", "#59636e", "#e1b8a2")
     for mobile in (False, True):
         width, height = (360, 380) if mobile else (700, 324)
-        x = 20 if mobile else 26
+        x = width / 2
         title_size = 35 if mobile else 42
-        logo_x, logo_y, logo_size = (207, 13, 52) if mobile else (247, 13, 64)
+        logo_size = 52 if mobile else 64
+        title_width = 169 if mobile else 203
+        title_x = (width - title_width - 12 - logo_size) / 2 + 5
+        logo_x, logo_y = title_x + title_width + 12, 13
         content = f'<rect x=".5" y=".5" width="{width-1}" height="{height-1}" rx="5" fill="{bg}" stroke="{border}"/>'
-        content += text(x, 61, "RustScenic", title_size, "#d46f40", 600, 'letter-spacing="-1.3"')
+        content += text(title_x, 61, "RustScenic", title_size, "#d46f40", 600, 'letter-spacing="-1.3"')
         content += f'<svg x="{logo_x}" y="{logo_y}" width="{logo_size}" height="{logo_size}" viewBox="0 0 1024 1024">{logo_content}</svg>'
         lines = (["The simplest, fastest software", "for studying gene regulation", "in single-cell data."] if mobile else ["The simplest, fastest software for studying gene regulation", "in single-cell data."])
-        for i, line in enumerate(lines): content += text(x, 104 + i*25, line, 17 if mobile else 18, ink, 500)
-        content += text(x, 183 if mobile else 165, "Published Python package, powered by Rust.", 11.5 if mobile else 12, muted)
-        content += text(x, 229 if mobile else 211, "3.3× faster", 20, ink, 600)
-        content += text(x if mobile else 181, 259 if mobile else 211, "81% lower peak memory", 20, ink, 600)
+        for i, line in enumerate(lines): content += text(x, 104 + i*25, line, 17 if mobile else 18, ink, 500, 'text-anchor="middle"')
+        content += text(x, 183 if mobile else 165, "Published Python package, powered by Rust.", 11.5 if mobile else 12, muted, extra='text-anchor="middle"')
+        if mobile:
+            content += text(x, 229, "3.3× faster", 20, ink, 600, 'text-anchor="middle"')
+            content += text(x, 259, "81% lower peak memory", 20, ink, 600, 'text-anchor="middle"')
+        else:
+            content += text(x, 211, '3.3× faster<tspan dx="24">81% lower peak memory</tspan>', 20, ink, 600, 'text-anchor="middle"')
         comparison = ["Benchmarked against widely used", "gene-regulation software."] if mobile else ["Benchmarked against widely used gene-regulation software."]
-        for i, line in enumerate(comparison): content += text(x, (287 if mobile else 236) + i*16, line, 10.5 if mobile else 11, muted)
+        for i, line in enumerate(comparison): content += text(x, (287 if mobile else 236) + i*16, line, 10.5 if mobile else 11, muted, extra='text-anchor="middle"')
         button_y = 325 if mobile else 260
-        content += f'<rect x="{x}" y="{button_y}" width="186" height="40" rx="4" fill="#d46f40"/>'
-        content += text(x+15, button_y+25, "Explore RustScenic", 13, "#10131a", 600)
-        content += text(x+163, button_y+26, "→", 20, "#10131a", 600, 'class="explore-arrow"')
+        button_x = (width - 186) / 2
+        content += f'<rect x="{button_x}" y="{button_y}" width="186" height="40" rx="4" fill="#d46f40"/>'
+        content += text(button_x+15, button_y+25, "Explore RustScenic", 13, "#10131a", 600)
+        content += text(button_x+163, button_y+26, "→", 20, "#10131a", 600, 'class="explore-arrow"')
         style = '.explore-arrow{animation:invite 1.8s ease-in-out infinite}@keyframes invite{50%{transform:translateX(5px)}}@media(prefers-reduced-motion:reduce){.explore-arrow,.floating-mark{animation:none}}'
         write(f"rustscenic-{theme}{'-mobile' if mobile else ''}.svg", width, height, "RustScenic: the simplest, fastest software for studying gene regulation in single-cell data. 3.3× faster, 81% lower peak memory. Explore RustScenic.", content, style)
         green_bg, green_text = ("#10211b", "#9be9a8") if dark else ("#e0eee3", "#1a6b2c")
         banner_width = 320 if mobile else 700
         content = f'<rect x=".5" y=".5" width="{banner_width-1}" height="63" rx="5" fill="{green_bg}" stroke="#3fb950" stroke-opacity=".4"/>'
-        content += text(18, 39, "See what I’ve built", 20, green_text, 600, 'letter-spacing="-.35"')
+        content += text(banner_width/2, 39, "See what I’ve built", 20, green_text, 600, 'letter-spacing="-.35" text-anchor="middle"')
         content += text(banner_width-38, 41, "↓", 27, green_text, 400, 'class="project-arrow"')
         style = '.project-arrow{animation:down 1.8s ease-in-out infinite}@keyframes down{50%{transform:translateY(4px)}}@media(prefers-reduced-motion:reduce){.project-arrow{animation:none}}'
         write(f"projects-{theme}{'-mobile' if mobile else ''}.svg", banner_width, 64, "See what I’ve built — explore pinned projects", content, style)
