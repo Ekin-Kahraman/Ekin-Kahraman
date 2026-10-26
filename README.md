@@ -80,18 +80,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/scverse/scanpy/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman"><picture>
-    <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-scanpy-dark-mobile.svg">
-    <source media="(max-width: 520px)" srcset="assets/profile/contribution-link-scanpy-light-mobile.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-scanpy-dark.svg">
-    <img src="assets/profile/contribution-link-scanpy-light.svg" width="49%" alt="Scanpy: view 5 merged pull requests">
-  </picture></a>
-  <a href="https://github.com/scverse/PyDESeq2/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman"><picture>
-    <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-pydeseq2-dark-mobile.svg">
-    <source media="(max-width: 520px)" srcset="assets/profile/contribution-link-pydeseq2-light-mobile.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-pydeseq2-dark.svg">
-    <img src="assets/profile/contribution-link-pydeseq2-light.svg" width="49%" alt="PyDESeq2: view 2 merged pull requests">
-  </picture></a>
+  <a href="https://github.com/scverse/scanpy/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman"><picture><source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-scanpy-dark-mobile.svg"><source media="(max-width: 520px)" srcset="assets/profile/contribution-link-scanpy-light-mobile.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-scanpy-dark.svg"><img src="assets/profile/contribution-link-scanpy-light.svg" width="49%" alt="Scanpy: view 5 merged pull requests"></picture></a>
+  <a href="https://github.com/scverse/PyDESeq2/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman"><picture><source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-pydeseq2-dark-mobile.svg"><source media="(max-width: 520px)" srcset="assets/profile/contribution-link-pydeseq2-light-mobile.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-pydeseq2-dark.svg"><img src="assets/profile/contribution-link-pydeseq2-light.svg" width="49%" alt="PyDESeq2: view 2 merged pull requests"></picture></a>
 </p>
 
 <br>
