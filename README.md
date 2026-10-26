@@ -70,18 +70,38 @@
 
 <br>
 
-<h3 align="center">Open-source software contributions</h3>
+<p align="center">
+  <picture>
+    <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/contributions-dark-mobile.svg">
+    <source media="(max-width: 520px)" srcset="assets/profile/contributions-light-mobile.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/contributions-dark.svg">
+    <img src="assets/profile/contributions-light.svg" width="100%" alt="Open-source software contributions: 7 merged pull requests in Scanpy and PyDESeq2. Plot examples, clearer errors and documentation fixes.">
+  </picture>
+</p>
 
-<p align="center"><a href="https://github.com/scverse/scanpy/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman">Scanpy</a> · <a href="https://github.com/scverse/PyDESeq2/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman">PyDESeq2</a></p>
+<p align="center">
+  <a href="https://github.com/scverse/scanpy/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman"><picture>
+    <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-scanpy-dark-mobile.svg">
+    <source media="(max-width: 520px)" srcset="assets/profile/contribution-link-scanpy-light-mobile.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-scanpy-dark.svg">
+    <img src="assets/profile/contribution-link-scanpy-light.svg" width="49%" alt="Scanpy: view 5 merged pull requests">
+  </picture></a>
+  <a href="https://github.com/scverse/PyDESeq2/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman"><picture>
+    <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-pydeseq2-dark-mobile.svg">
+    <source media="(max-width: 520px)" srcset="assets/profile/contribution-link-pydeseq2-light-mobile.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/contribution-link-pydeseq2-dark.svg">
+    <img src="assets/profile/contribution-link-pydeseq2-light.svg" width="49%" alt="PyDESeq2: view 2 merged pull requests">
+  </picture></a>
+</p>
 
-<br><br><br>
+<br>
 
 <p align="center">
   <picture>
-    <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/projects-dark-mobile.svg">
-    <source media="(max-width: 520px)" srcset="assets/profile/projects-light-mobile.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/projects-dark.svg">
-    <img src="assets/profile/projects-light.svg" width="100%" alt="↓ See what I’ve built ↓">
+    <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/projects-invitation-dark-mobile.svg">
+    <source media="(max-width: 520px)" srcset="assets/profile/projects-invitation-light-mobile.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/projects-invitation-dark.svg">
+    <img src="assets/profile/projects-invitation-light.svg" width="100%" alt="See what I’ve built: research software, ML and automated workflows. Explore the six pinned projects below.">
   </picture>
 </p>
 
