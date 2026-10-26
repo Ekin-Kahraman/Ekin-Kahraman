@@ -70,7 +70,7 @@
 
 <br>
 
-<h3 align="center"><a href="https://github.com/search?q=author%3AEkin-Kahraman+is%3Apr+is%3Amerged+-user%3AEkin-Kahraman+-org%3AUEABIO&amp;type=pullrequests">Open-source contributions ↗</a></h3>
+<h3 align="center"><a name="open-source-contributions-"></a><a href="https://github.com/search?q=author%3AEkin-Kahraman+is%3Apr+is%3Amerged+-user%3AEkin-Kahraman+-org%3AUEABIO&amp;type=pullrequests"><img src="assets/profile/open-source-contributions-grey.svg" width="239" height="18" align="absmiddle" alt="Open-source contributions ↗"></a></h3>
 
 <p align="center">&nbsp;</p>
 
