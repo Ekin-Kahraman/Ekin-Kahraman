@@ -6,5 +6,3 @@ The workstation artwork and profile cards were created for this profile.
 - Handshake and bar-chart artwork are from [Animated Fluent Emojis](https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis). The statistics icon has a local bobbing animation.
 
 `scripts/build_profile_cards.py` builds the themed cards. `scripts/pinned-projects.json` records the approved native repository descriptions and order. The contribution graphic is a snapshot; its repeating growth animation allows it to be seen without JavaScript on GitHub.
-
-`scripts/build_profile_footer.py` builds the original contribution panel, repository links and project invitation, with separate light, dark and mobile layouts. The seven merged contributions were verified on 26 October 2026: Scanpy #4032, #4056–4059; PyDESeq2 #442–443. Motion respects the reduced-motion preference.
