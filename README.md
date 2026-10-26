@@ -70,9 +70,9 @@
 
 <br>
 
-<h3 align="center">Open-source software contributions</h3>
+<h3 align="center"><a href="https://github.com/search?q=author%3AEkin-Kahraman+is%3Apr+is%3Amerged+-user%3AEkin-Kahraman+-org%3AUEABIO&amp;type=pullrequests">Open-source contributions ↗</a></h3>
 
-<p align="center"><a href="https://github.com/scverse/scanpy/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman">Scanpy</a> · <a href="https://github.com/scverse/PyDESeq2/pulls?q=is%3Apr+is%3Amerged+author%3AEkin-Kahraman">PyDESeq2</a></p>
+<p align="center">&nbsp;</p>
 
 <br><br><br>
 
