@@ -2,11 +2,11 @@
   "totalContributions": 1337,
   "year": 2026,
   "contributionTypes": {
-    "Commit": 1130,
+    "Commit": 947,
     "Issue": 0,
-    "PullReq": 164,
+    "PullReq": 162,
     "Review": 0,
-    "Repo": 34
+    "Repo": 28
   },
   "contributionDays": [
     {

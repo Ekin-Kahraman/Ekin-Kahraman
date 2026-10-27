@@ -1,20 +1,15 @@
 {
   "metric": "Commit contributions by repository primary language",
-  "total": 1130,
+  "total": 947,
   "languages": [
     {
       "language": "Python",
-      "contributions": 869,
+      "contributions": 854,
       "colour": "#3572A5"
     },
     {
-      "language": "Shell",
-      "contributions": 153,
-      "colour": "#89e051"
-    },
-    {
       "language": "R",
-      "contributions": 56,
+      "contributions": 48,
       "colour": "#198CE7"
     },
     {
@@ -24,12 +19,12 @@
     },
     {
       "language": "JavaScript",
-      "contributions": 14,
+      "contributions": 9,
       "colour": "#f1e05a"
     },
     {
       "language": "Rust",
-      "contributions": 3,
+      "contributions": 1,
       "colour": "#dea584"
     },
     {
