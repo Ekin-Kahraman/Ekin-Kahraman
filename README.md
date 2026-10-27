@@ -27,7 +27,7 @@
     <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/rustscenic-dark-mobile.svg">
     <source media="(max-width: 520px)" srcset="assets/profile/rustscenic-light-mobile.svg">
     <source media="(prefers-color-scheme: dark)" srcset="assets/profile/rustscenic-dark.svg">
-    <img src="assets/profile/rustscenic-light.svg" width="100%" alt="RustScenic. The simplest, fastest software for studying gene regulation in single-cell data. Published Python package, powered by Rust. 3.3× faster · 81% lower peak memory. Explore RustScenic →">
+    <img src="assets/profile/rustscenic-light.svg" width="100%" alt="RustScenic. The simplest, fastest software for studying gene regulation in single-cell data. Published Python package, powered by Rust. 3× faster · ~80% lower peak memory on 1.3 million real cells. Explore RustScenic →">
   </picture>
 </a></p>
 

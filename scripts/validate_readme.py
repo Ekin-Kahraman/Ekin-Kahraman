@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 text = (ROOT / "README.md").read_text()
 assert not re.search(r"<(?:script|style)\b|data:image/", text, re.I), "README must use GitHub-compatible markup"
-for term in ("Creator of RustScenic.", "Leading RustScenic’s development", "Huang Lab", "Kuan-Lin Huang", "Connect With Me", "Statistics", "Open-source software contributions", "See what I’ve built", "3.3× faster", "81% lower peak memory"):
+for term in ("Creator of RustScenic.", "Leading RustScenic’s development", "Huang Lab", "Kuan-Lin Huang", "Connect With Me", "Statistics", "Open-source software contributions", "See what I’ve built", "3× faster", "~80% lower peak memory"):
     assert term in text, f"Missing approved content: {term}"
 assert "Open to" not in text and "Telegram" not in text
 assert text.count("mailto:evk23umu@uea.ac.uk") == 1
