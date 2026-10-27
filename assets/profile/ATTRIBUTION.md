@@ -5,4 +5,4 @@ The workstation artwork and profile cards were created for this profile.
 - LinkedIn mark: [Simple Icons](https://github.com/simple-icons/simple-icons), CC0.
 - Handshake and bar-chart artwork are from [Animated Fluent Emojis](https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis). The statistics icon has a local bobbing animation.
 
-`scripts/build_profile_cards.py` builds the themed cards. `scripts/pinned-projects.json` records the approved native repository descriptions and order. The contribution graphic is a snapshot; its repeating growth animation allows it to be seen without JavaScript on GitHub.
+`scripts/build_profile_cards.py` builds the themed cards. `scripts/pinned-projects.json` records the approved native repository descriptions and order. `scripts/update_profile_statistics.py` refreshes the contribution calendar, language chart and contribution types from GitHub's GraphQL API. The Update profile statistics workflow checks hourly and can also be run manually. It only commits when the data changes, then pins the README images to the new asset commit to avoid stale image caches. The repeating growth animation works without JavaScript on GitHub.

@@ -1,0 +1,55 @@
+name: Update profile statistics
+
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/update_profile_statistics.py
+      - scripts/prepare_profile_theme_assets.py
+      - .github/workflows/update-statistics.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-statistics
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.repository == 'Ekin-Kahraman/Ekin-Kahraman'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh statistics from GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git pull --ff-only origin main
+          python scripts/update_profile_statistics.py
+          python scripts/validate_readme.py
+      - name: Publish changed artwork and refresh image URLs
+        run: |
+          if git diff --quiet -- assets/profile; then
+            echo "Statistics are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/profile/statistics*.svg assets/profile/statistics-metadata.json assets/profile/language-metadata.json
+          git commit -m "Refresh profile statistics from GitHub"
+          statistics_revision=$(git rev-parse HEAD)
+          python scripts/update_profile_statistics.py --pin-readme "$statistics_revision"
+          python scripts/validate_readme.py
+          git add README.md
+          git commit -m "Display the latest profile statistics"
+          git push origin HEAD:main

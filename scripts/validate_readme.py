@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 text = (ROOT / "README.md").read_text()
 assert not re.search(r"<(?:script|style)\b|data:image/", text, re.I), "README must use GitHub-compatible markup"
-for term in ("Creator of RustScenic.", "Leading RustScenic’s development", "Huang Lab", "Kuan-Lin Huang", "Connect With Me", "Statistics", "Open-source software contributions", "See what I’ve built", "3× faster", "~80% lower peak memory"):
+for term in ("Creator of RustScenic.", "Leading RustScenic’s development", "Huang Lab", "Kuan-Lin Huang", "Connect With Me", "Statistics", "Open-source contributions", "See what I’ve built", "3× faster", "~80% lower peak memory"):
     assert term in text, f"Missing approved content: {term}"
 assert "Open to" not in text and "Telegram" not in text
 assert text.count("mailto:evk23umu@uea.ac.uk") == 1
@@ -34,8 +34,20 @@ assert "plant-wind-filter" in workstation and "hardware-slate" in workstation
 assert "Hi, I’m Ekin!" not in workstation and "mouse-use" in workstation
 language_data = json.loads((ROOT / "assets/profile/language-metadata.json").read_text())
 counts = {entry["language"]: entry["contributions"] for entry in language_data["languages"]}
-assert counts["Rust"] == 2 and counts["other"] == 4
-assert sum(counts.values()) == language_data["total"] == 1060
+assert "Rust" in counts and "other" in counts
+assert all(isinstance(count, int) and count >= 0 for count in counts.values())
+assert sum(counts.values()) == language_data["total"]
+statistics = json.loads((ROOT / "assets/profile/statistics-metadata.json").read_text())
+assert language_data["total"] == statistics["contributionTypes"]["Commit"]
+days = statistics["contributionDays"]
+assert sum(d["contributionCount"] for d in days) == statistics["totalContributions"]
+bars = {g.get("data-date"): g for g in graphic.find(ns + "g").findall(ns + "g")}
+assert len(bars) == len(days)
+for day in days:
+    bar = bars[day["date"]]
+    assert int(bar.get("data-count")) == day["contributionCount"]
+    if day["contributionCount"] == 0:
+        assert all(float(r.get("height")) == 2.6 for r in bar.findall(ns + "rect") if r.get("class").endswith(("-left", "-right")))
 for theme in ("light", "dark"):
     for static in (False, True):
         suffix = f"{'still-' if static else ''}{theme}.svg"
@@ -46,7 +58,11 @@ for theme in ("light", "dark"):
         expected_ink = "#f0f6fc" if theme == "dark" else "#1f2328"
         labels = ET.fromstring(greeting).iter(ns + "text")
         assert all(label.get("fill") == expected_ink for label in labels)
-        assert "Rust 2" in chart and "other 4" in chart
+        parsed_chart = ET.fromstring(chart)
+        assert parsed_chart.get("data-total-contributions") == str(statistics["totalContributions"])
+        titles = {n.text for n in parsed_chart.iter(ns + "title")}
+        assert all(f"{name} {count}" in titles for name, count in counts.items())
+        assert not re.search(r"\d{4}-\d{2}-\d{2}\s*/\s*\d{4}-\d{2}-\d{2}", chart), "Keep the top-right date label removed"
         backgrounds = re.findall(r"\.fill-bg\s*\{\s*fill:\s*(#[0-9a-fA-F]{6})", chart)
         assert backgrounds and set(backgrounds) == {"#000000"}, "Statistics canvas must stay pure black"
         if static:

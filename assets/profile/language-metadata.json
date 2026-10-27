@@ -1,21 +1,20 @@
 {
   "metric": "Commit contributions by repository primary language",
-  "snapshotDate": "2026-10-25",
-  "total": 1060,
+  "total": 1130,
   "languages": [
     {
       "language": "Python",
-      "contributions": 805,
+      "contributions": 869,
       "colour": "#3572A5"
     },
     {
       "language": "Shell",
-      "contributions": 151,
+      "contributions": 153,
       "colour": "#89e051"
     },
     {
       "language": "R",
-      "contributions": 55,
+      "contributions": 56,
       "colour": "#198CE7"
     },
     {
@@ -30,13 +29,14 @@
     },
     {
       "language": "Rust",
-      "contributions": 2,
+      "contributions": 3,
       "colour": "#dea584"
     },
     {
       "language": "other",
-      "contributions": 4,
+      "contributions": 6,
       "colour": "#444444"
     }
-  ]
+  ],
+  "snapshotDate": "2026-10-27"
 }
