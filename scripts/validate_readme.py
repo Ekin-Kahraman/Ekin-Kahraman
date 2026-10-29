@@ -11,7 +11,8 @@ for term in ("Creator of RustScenic.", "Leading RustScenic’s development", "Hu
     assert term in text, f"Missing approved content: {term}"
 assert "Open to" not in text and "Telegram" not in text
 assert text.count("mailto:evk23umu@uea.ac.uk") == 1
-assert "pinned-projects" not in text, "Keep the project invitation from adding a persistent URL fragment that jumps down on refresh"
+assert 'href="#pinned-projects"' in text, "Use a same-page section link for the projects banner"
+assert text.rstrip().endswith('<a name="pinned-projects"></a>'), "Keep the destination directly above GitHub's pinned projects"
 for path in re.findall(r'(?:src|srcset)="(assets/[^\"]+)"', text):
     assert (ROOT / path).is_file(), f"Missing image: {path}"
 for path in (ROOT / "assets/profile").glob("*.svg"):

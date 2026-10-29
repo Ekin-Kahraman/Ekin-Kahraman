@@ -77,12 +77,16 @@
 <br><br><br>
 
 <p align="center">
+  <a href="#pinned-projects" title="View pinned projects below">
   <picture>
     <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/projects-dark-mobile.svg">
     <source media="(max-width: 520px)" srcset="assets/profile/projects-light-mobile.svg">
     <source media="(prefers-color-scheme: dark)" srcset="assets/profile/projects-dark.svg">
     <img src="assets/profile/projects-light.svg" width="100%" alt="↓ See what I’ve built ↓">
   </picture>
+  </a>
 </p>
 
 <br>
+
+<a name="pinned-projects"></a>
