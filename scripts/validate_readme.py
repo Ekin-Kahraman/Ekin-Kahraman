@@ -1,5 +1,6 @@
 """Check the published profile's links, assets and contribution geometry."""
 import json
+from html.parser import HTMLParser
 from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
@@ -33,6 +34,47 @@ assert not any(n.tag.rsplit("}", 1)[-1] in ("animate", "animateTransform", "anim
 workstation = (ROOT / "assets/profile/workstation.svg").read_text()
 assert "plant-wind-filter" in workstation and "hardware-slate" in workstation
 assert "Hi, I’m Ekin!" not in workstation and "mouse-use" in workstation
+
+# A normal HTML link surrounds only the laptop URL view, never the full hero.
+hero = text.split("<!-- workstation-links:start -->", 1)[1].split("<!-- workstation-links:end -->", 1)[0]
+
+
+class HeroLinks(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links, self.images, self.linked_images = [], [], []
+        self.active_link = None
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "a":
+            self.active_link = attrs.get("href")
+            self.links.append(self.active_link)
+        elif tag == "img":
+            self.images.append(attrs)
+            if self.active_link:
+                self.linked_images.append(attrs)
+
+    def handle_endtag(self, tag):
+        if tag == "a":
+            self.active_link = None
+
+
+hero_links = HeroLinks()
+hero_links.feed(hero)
+assert hero_links.links == ["https://www.linkedin.com/in/ekinka"]
+assert len(hero_links.images) == 5 and len(hero_links.linked_images) == 1
+assert hero_links.linked_images[0]["src"].endswith("#workstation-linkedin")
+assert hero_links.images[0]["width"] == hero_links.images[-1]["width"] == "700"
+assert abs(sum(float(n["width"].rstrip("%")) for n in hero_links.images[1:4]) - 100) < 1e-8
+for source, linked in (("workstation.svg", "workstation-linked.svg"), ("workstation-still.svg", "workstation-linked-still.svg")):
+    original = ET.parse(ROOT / "assets/profile" / source).getroot()
+    sliced = ET.parse(ROOT / "assets/profile" / linked).getroot()
+    assert original.get("viewBox") == sliced.get("viewBox") == "30 110 1645 735"
+    views = {n.get("id"): tuple(map(int, n.get("viewBox").split())) for n in sliced.findall(ns + "view")}
+    assert views["workstation-linkedin"] == (1322, 624, 210, 38)
+    assert len(views) == 5 and sum(w * h for x, y, w, h in views.values()) == 1645 * 735
+    assert [ET.tostring(n) for n in original] == [ET.tostring(n) for n in sliced if n.tag != ns + "view"], "Preserve the original artwork and animation"
 language_data = json.loads((ROOT / "assets/profile/language-metadata.json").read_text())
 counts = {entry["language"]: entry["contributions"] for entry in language_data["languages"]}
 assert "Rust" in counts and "other" in counts
