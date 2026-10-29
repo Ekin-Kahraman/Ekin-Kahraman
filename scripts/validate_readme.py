@@ -74,7 +74,10 @@ for source, linked in (("workstation.svg", "workstation-linked.svg"), ("workstat
     views = {n.get("id"): tuple(map(int, n.get("viewBox").split())) for n in sliced.findall(ns + "view")}
     assert views["workstation-linkedin"] == (1322, 624, 210, 38)
     assert len(views) == 5 and sum(w * h for x, y, w, h in views.values()) == 1645 * 735
-    assert [ET.tostring(n) for n in original] == [ET.tostring(n) for n in sliced if n.tag != ns + "view"], "Preserve the original artwork and animation"
+    artwork = [n for n in sliced if n.tag != ns + "view"]
+    for n in [*original, *artwork]:
+        n.tail = None  # Appending views changes only the root-level indentation.
+    assert [ET.tostring(n) for n in original] == [ET.tostring(n) for n in artwork], "Preserve the original artwork and animation"
 language_data = json.loads((ROOT / "assets/profile/language-metadata.json").read_text())
 counts = {entry["language"]: entry["contributions"] for entry in language_data["languages"]}
 assert "Rust" in counts and "other" in counts
