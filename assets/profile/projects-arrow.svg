@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="176" viewBox="0 0 144 176" role="img" aria-labelledby="title">
+  <title id="title">Pinned projects below</title>
+  <style>
+    .direction { animation: point-down 2.4s ease-in-out infinite; }
+    @keyframes point-down { 50% { transform: translateY(8px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .direction { animation: none; }
+    }
+  </style>
+  <path class="direction" d="M72 32v96M38 94l34 34 34-34" fill="none" stroke="#6366f1" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

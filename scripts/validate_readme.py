@@ -7,14 +7,16 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 text = (ROOT / "README.md").read_text()
 assert not re.search(r"<(?:script|style)\b|data:image/", text, re.I), "README must use GitHub-compatible markup"
-for term in ("Creator of RustScenic.", "Leading RustScenic’s development", "Huang Lab", "Kuan-Lin Huang", "Connect With Me", "Statistics", "Open-source contributions", "See what I’ve built", "3× faster", "~80% lower peak memory"):
+for term in ("Creator of RustScenic.", "Leading RustScenic’s development", "Huang Lab", "Kuan-Lin Huang", "Connect With Me", "Statistics", "Open-source contributions", "Pinned projects below", "3× faster", "~80% lower peak memory"):
     assert term in text, f"Missing approved content: {term}"
 assert "Open to" not in text and "Telegram" not in text
 assert text.count("mailto:evk23umu@uea.ac.uk") == 1
-assert "pinned-projects" not in text, "The projects banner must not leave a fragment that redirects on refresh"
-project_section = re.search(r"<details>\s*<summary\b[^>]*>(.*?)</summary>(.*?)</details>", text, re.S)
-assert project_section and "See what I’ve built" in project_section[1], "The projects banner must expand in place"
-assert not re.search(r"<a\b", project_section[1]), "Clicking the banner must only toggle the project list"
+assert "pinned-projects" not in text, "The projects cue must not leave a fragment that redirects on refresh"
+assert "See what I’ve built" not in text, "Keep the old projects banner removed"
+project_footer = text.rsplit("\n---\n", 1)[-1]
+assert 'src="assets/profile/projects-arrow.svg" width="144" height="176"' in project_footer, "Keep the prominent arrow below the section divider"
+assert not re.search(r"<(?:a|details|summary)\b", project_footer), "The arrow must stay a visual cue without links or an expanded list"
+assert "Open-source contributions" not in project_footer, "Keep the arrow separate from Open-source contributions"
 for path in re.findall(r'(?:src|srcset)="(assets/[^\"]+)"', text):
     assert (ROOT / path).is_file(), f"Missing image: {path}"
 for path in (ROOT / "assets/profile").glob("*.svg"):
@@ -23,7 +25,6 @@ for path in (ROOT / "assets/profile").glob("*.svg"):
 projects = json.loads((ROOT / "scripts/pinned-projects.json").read_text())
 assert len(projects) == 6 and projects[0]["name"] == "rustscenic" and projects[1]["name"] == "safetynett"
 assert all(len(p["description"]) <= 350 for p in projects)
-assert all(f'[{p["name"]}]({p["url"]})' in project_section[2] for p in projects), "The expanded banner must link to all six projects"
 ns = "{http://www.w3.org/2000/svg}"
 graphic = ET.parse(ROOT / "assets/profile/statistics.svg").getroot()
 assert graphic.get("data-weak-day-scale") == "10"
