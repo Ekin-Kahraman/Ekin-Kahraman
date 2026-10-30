@@ -76,17 +76,21 @@
 
 <br><br><br>
 
-<p align="center">
-  <a href="#pinned-projects" title="View pinned projects below">
+<details>
+  <summary title="Expand or collapse projects">
   <picture>
     <source media="(max-width: 520px) and (prefers-color-scheme: dark)" srcset="assets/profile/projects-dark-mobile.svg">
     <source media="(max-width: 520px)" srcset="assets/profile/projects-light-mobile.svg">
     <source media="(prefers-color-scheme: dark)" srcset="assets/profile/projects-dark.svg">
     <img src="assets/profile/projects-light.svg" width="100%" alt="↓ See what I’ve built ↓">
   </picture>
-  </a>
-</p>
+  </summary>
 
-<br>
+- **[rustscenic](https://github.com/Ekin-Kahraman/rustscenic)** — The simplest, fastest software for studying gene regulation in single-cell data · Rust & Python
+- **[safetynett](https://github.com/Ekin-Kahraman/safetynett)** — Hackathon finalist prototype · AI-automated GP follow-ups with Claude
+- **[covid-airway-deconvolution](https://github.com/Ekin-Kahraman/covid-airway-deconvolution)** — Airway cell composition in COVID-19 · Python & PyTorch
+- **[bulk-rnaseq-differential-expression](https://github.com/Ekin-Kahraman/bulk-rnaseq-differential-expression)** — COVID-19 host response · R & DESeq2
+- **[single-cell-rnaseq-immune-profiling](https://github.com/Ekin-Kahraman/single-cell-rnaseq-immune-profiling)** — Single-cell immune profiling · Python & Scanpy
+- **[rnaseq-nextflow-pipeline](https://github.com/Ekin-Kahraman/rnaseq-nextflow-pipeline)** — RNA-seq Nextflow pipeline
 
-<a name="pinned-projects"></a>
+</details>

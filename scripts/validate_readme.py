@@ -11,8 +11,10 @@ for term in ("Creator of RustScenic.", "Leading RustScenic’s development", "Hu
     assert term in text, f"Missing approved content: {term}"
 assert "Open to" not in text and "Telegram" not in text
 assert text.count("mailto:evk23umu@uea.ac.uk") == 1
-assert 'href="#pinned-projects"' in text, "Use a same-page section link for the projects banner"
-assert text.rstrip().endswith('<a name="pinned-projects"></a>'), "Keep the destination directly above GitHub's pinned projects"
+assert "pinned-projects" not in text, "The projects banner must not leave a fragment that redirects on refresh"
+project_section = re.search(r"<details>\s*<summary\b[^>]*>(.*?)</summary>(.*?)</details>", text, re.S)
+assert project_section and "See what I’ve built" in project_section[1], "The projects banner must expand in place"
+assert not re.search(r"<a\b", project_section[1]), "Clicking the banner must only toggle the project list"
 for path in re.findall(r'(?:src|srcset)="(assets/[^\"]+)"', text):
     assert (ROOT / path).is_file(), f"Missing image: {path}"
 for path in (ROOT / "assets/profile").glob("*.svg"):
@@ -21,6 +23,7 @@ for path in (ROOT / "assets/profile").glob("*.svg"):
 projects = json.loads((ROOT / "scripts/pinned-projects.json").read_text())
 assert len(projects) == 6 and projects[0]["name"] == "rustscenic" and projects[1]["name"] == "safetynett"
 assert all(len(p["description"]) <= 350 for p in projects)
+assert all(f'[{p["name"]}]({p["url"]})' in project_section[2] for p in projects), "The expanded banner must link to all six projects"
 ns = "{http://www.w3.org/2000/svg}"
 graphic = ET.parse(ROOT / "assets/profile/statistics.svg").getroot()
 assert graphic.get("data-weak-day-scale") == "10"
