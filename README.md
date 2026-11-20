@@ -57,10 +57,10 @@
 
 <p align="center"><a href="https://github.com/Ekin-Kahraman?tab=overview&amp;from=2026-01-01&amp;to=2026-12-31">
   <picture>
-    <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/7c9fe26cdec536244c61415782b4a9c32c6ca51f/assets/profile/statistics-still-dark.svg">
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/7c9fe26cdec536244c61415782b4a9c32c6ca51f/assets/profile/statistics-still-light.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/7c9fe26cdec536244c61415782b4a9c32c6ca51f/assets/profile/statistics-dark.svg">
-    <img src="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/7c9fe26cdec536244c61415782b4a9c32c6ca51f/assets/profile/statistics-light.svg" width="100%" alt="Ekin Kahraman’s 2026 contribution skyline, programming languages and contribution types. Zero-contribution days remain flat.">
+    <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/296e983d2d02537fa526c57ce7bf03ff2ba751c3/assets/profile/statistics-still-dark.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/296e983d2d02537fa526c57ce7bf03ff2ba751c3/assets/profile/statistics-still-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/296e983d2d02537fa526c57ce7bf03ff2ba751c3/assets/profile/statistics-dark.svg">
+    <img src="https://raw.githubusercontent.com/Ekin-Kahraman/Ekin-Kahraman/296e983d2d02537fa526c57ce7bf03ff2ba751c3/assets/profile/statistics-light.svg" width="100%" alt="Ekin Kahraman’s 2026 contribution skyline, programming languages and contribution types. Zero-contribution days remain flat.">
   </picture>
 </a></p>
 
